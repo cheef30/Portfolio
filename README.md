@@ -27,6 +27,13 @@ Kad povežeš svoj domen, u `index.html` zameni tu adresu novim domenom (u `og:u
 `og:image` i `twitter:image`) i dodaj `<link rel="canonical" href="https://tvojdomen.rs/">`.
 Bez toga se slika neće pojaviti kad link podeliš na Vajberu, Fejsbuku i LinkedInu.
 
+## Utisci klijenata
+
+Sekcija "Šta kažu klijenti" je spremna u `index.html` (id `utisci`), ali je skrivena
+atributom `hidden` dok klijenti ne odobre tekst. Kad odobre: upiši pravo ime umesto
+`[Ime i prezime]`, po potrebi izmeni citat (srpski u `index.html`, engleski u
+`js/main.js` pod `voices.q1` do `voices.q3`) i obriši `hidden` iz `<section>`.
+
 ## Logo
 
 Logo je znak `<` iznad znaka `>`, tako da zajedno čine slovo S. Nalazi se u `index.html`

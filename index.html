@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#fec834">
   <meta name="color-scheme" content="light">
 
-  <!-- Društvene mreže. Kad sajt pređe na svoj domen, zameni https://cheef30.github.io/Portfolio/ novim domenom u og:url, og:image i twitter:image. -->
+  <!-- Društvene mreže. Kad sajt pređe na svoj domen, zameni https://cheef30.github.io/Portfolio/ novim domenom u canonical, og:url, og:image, twitter:image, kao i u sitemap.xml i robots.txt. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cheef30.github.io/Portfolio/">
   <meta property="og:site_name" content="Stefan Stević">
@@ -23,6 +23,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://cheef30.github.io/Portfolio/og-image.jpg">
 
+  <link rel="canonical" href="https://cheef30.github.io/Portfolio/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -463,6 +464,41 @@
         </ul>
       </div>
       <div class="archive__preview" data-preview-box aria-hidden="true"><img alt="" decoding="async"></div>
+    </section>
+
+    <!-- ============ Utisci ============
+         Sekcija je skrivena (atribut hidden) dok klijenti ne odobre tekst.
+         Kad odobre: upiši pravo ime i ulogu, pa obriši "hidden" iz <section>. -->
+    <section class="section voices" id="utisci" data-theme="#e7e3da" hidden>
+      <div class="wrap">
+        <header class="voices__head">
+          <h2 class="section-title" data-i18n="voices.title">Šta kažu klijenti</h2>
+          <p class="voices__sub" data-i18n="voices.sub">Ljudi sa kojima sam radio, svojim rečima.</p>
+        </header>
+        <ul class="voices__list">
+          <li>
+            <figure class="voice">
+              <span class="voice__q" aria-hidden="true">“</span>
+              <blockquote class="voice__text" data-i18n="voices.q1">Kupci sada sami pregledaju stanove u 3D-u i zovu nas kad su već izabrali stan. Kad promenimo cenu ili prodamo stan, javimo Stefanu i na sajtu je istog dana.</blockquote>
+              <figcaption class="voice__who"><strong>[Ime i prezime]</strong><a href="#modus">Modus Gradnja</a></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="voice">
+              <span class="voice__q" aria-hidden="true">“</span>
+              <blockquote class="voice__text" data-i18n="voices.q2">Polaske i cene sada unosimo sami, bez čekanja na programera. Sajt se na telefonu otvara mnogo brže nego stari, a putnici sami biraju mesto u autobusu.</blockquote>
+              <figcaption class="voice__who"><strong>[Ime i prezime]</strong><a href="#naizlet">Na Izlet</a></figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="voice">
+              <span class="voice__q" aria-hidden="true">“</span>
+              <blockquote class="voice__text" data-i18n="voices.q3">Stefan je brzo shvatio šta nam treba i nije komplikovao. Sajt radi i na srpskom i na engleskom, a nove ponude dodajemo bez problema.</blockquote>
+              <figcaption class="voice__who"><strong>[Ime i prezime]</strong><a href="#leto">Leto u Turskoj</a></figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- ============ Usluge ============ -->

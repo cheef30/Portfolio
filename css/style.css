@@ -1582,6 +1582,86 @@ a.shot:hover img {
 /* ==========================================================================
    Services
    ========================================================================== */
+/* ---------- Utisci ---------- */
+.voices {
+  background: var(--paper-2);
+  color: var(--ink);
+  padding: clamp(88px, 13vh, 160px) 0;
+}
+.voices__head {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 24px;
+  align-items: end;
+  margin-bottom: clamp(36px, 6vh, 64px);
+}
+.voices__sub {
+  justify-self: end;
+  max-width: 38ch;
+  color: var(--slate);
+}
+.voices__list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 24px);
+}
+.voice {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: clamp(24px, 2.4vw, 36px);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 1px 0 rgba(18, 22, 40, 0.06);
+}
+.voice__q {
+  height: 0.5em;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--sun-deep);
+}
+.voice__text {
+  flex: 1;
+  margin: 0;
+  font-size: clamp(1.0625rem, 0.98rem + 0.32vw, 1.25rem);
+  line-height: 1.5;
+}
+.voice__who {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-light);
+  font-size: 0.9375rem;
+}
+.voice__who strong {
+  font-weight: 700;
+}
+.voice__who a {
+  color: var(--slate);
+  text-decoration: none;
+}
+.voice__who a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .voices__head {
+    grid-template-columns: 1fr;
+  }
+  .voices__sub {
+    justify-self: start;
+  }
+  .voices__list {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+}
+
 .services {
   background: var(--paper);
   color: var(--ink);

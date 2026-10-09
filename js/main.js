@@ -132,6 +132,12 @@
     'tag.thesis': 'Thesis',
     'tag.concept': 'Concept',
 
+    'voices.title': 'What clients say',
+    'voices.sub': 'People I’ve worked with, in their own words.',
+    'voices.q1': 'Buyers now browse the apartments in 3D on their own and call us once they’ve already picked one. When we change a price or sell an apartment, we tell Stefan and it’s on the site the same day.',
+    'voices.q2': 'We add departures and prices ourselves now, without waiting on a developer. The site opens much faster on phones than the old one, and travellers pick their own bus seat.',
+    'voices.q3': 'Stefan quickly understood what we needed and didn’t overcomplicate it. The site works in Serbian and English, and adding new offers is easy.',
+
     'services.title': 'What I can do for you',
     'services.sub': 'Before I start, we agree on the price and the timeline, so you know where you stand.',
     'svc.ask': 'Ask about this service',
