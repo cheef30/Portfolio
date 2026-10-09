@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stranica ne postoji — Stefan Stević</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fec834">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/archivo-base.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Archivo";
+      src: url("/fonts/archivo-base.woff2") format("woff2");
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
+      unicode-range: U+0020-007E, U+00A0-00FF, U+2013-2014, U+2018-201E, U+2026, U+20AC;
+    }
+    @font-face {
+      font-family: "Archivo";
+      src: url("/fonts/archivo-sr.woff2") format("woff2");
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
+      unicode-range: U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E;
+    }
+    :root { --sun: #fec834; --ink: #121628; --gutter: clamp(16px, 3.4vw, 52px); }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      align-content: space-between;
+      min-height: 100svh;
+      padding: 24px var(--gutter) 32px;
+      background: var(--sun);
+      color: var(--ink);
+      font-family: "Archivo", "Arial Narrow", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .brand { font-weight: 720; font-stretch: 88%; text-decoration: none; }
+    h1 {
+      margin: 0;
+      font-size: clamp(7rem, 34vw, 30rem);
+      font-weight: 840;
+      font-stretch: 125%;
+      line-height: 0.85;
+      letter-spacing: -0.02em;
+      transition: font-stretch 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    h1:hover { font-stretch: 62%; }
+    p { max-width: 34ch; margin: 18px 0 26px; font-size: clamp(1.125rem, 1rem + 0.6vw, 1.5rem); line-height: 1.35; font-weight: 520; }
+    .btn {
+      display: inline-flex; align-items: center; min-height: 52px; padding: 0 1.5em;
+      border-radius: 999px; background: var(--ink); color: #eef0f3;
+      font-weight: 620; text-decoration: none;
+    }
+    .btn:hover { background: #3d6aa6; }
+    :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <a class="brand" href="/">Stefan Stević</a>
+  <main>
+    <h1 aria-label="Greška 404">404</h1>
+    <p>Ova stranica ne postoji ili je premeštena. Sve ostalo je na početnoj.</p>
+    <a class="btn" href="/">Nazad na početnu</a>
+  </main>
+</body>
+</html>

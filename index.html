@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="sr-Latn" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stefan Stević — web developer | Sajtovi i web aplikacije za firme</title>
+  <meta name="description" content="Stefan Stević, web developer iz Obrenovca. Sajtovi i web aplikacije za firme: 3D konfiguratori, sistemi rezervacija, dvojezični sajtovi i održavanje.">
+  <meta name="author" content="Stefan Stević">
+  <meta name="theme-color" content="#fec834">
+  <meta name="color-scheme" content="light">
+
+  <!-- Društvene mreže. Kad sajt dobije domen, upiši pun URL u og:url i og:image (npr. https://tvojdomen.rs/og-image.jpg). -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:title" content="Stefan Stević — web developer">
+  <meta property="og:description" content="Sajtovi i web aplikacije za firme koje žele više upita, poziva i rezervacija.">
+  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="fonts/archivo-base.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/archivo-sr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" type="image/avif" imagesrcset="img/stefan-hero-600.avif 600w, img/stefan-hero-720.avif 720w, img/stefan-hero-890.avif 890w" imagesizes="(min-width: 1024px) 56vw, 120vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Stefan Stević",
+    "jobTitle": "Web developer",
+    "email": "mailto:stefanstevicoz30@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Obrenovac", "addressCountry": "RS" },
+    "telephone": "+381645580188",
+    "sameAs": ["https://github.com/cheef30", "https://www.instagram.com/stevke30/"],
+    "knowsAbout": ["Web development", "Next.js", "React", "TypeScript", "Supabase", "Three.js", "GSAP", "SEO"],
+    "knowsLanguage": ["sr", "en"]
+  }
+  </script>
+</head>
+<body>
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-viber" viewBox="0 0 24 24"><path fill="currentColor" d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.02-.36-9.83-2.34-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.96-1.773 5.474-2.018 7.11-2.03zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.12-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.12-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.05-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.52-.607h-.018z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+    <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21.5 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.6 4.2 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.6 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3.5 20.5l1.4-4.4a8.5 8.5 0 1 1 15.6-4.5z"/></symbol>
+  </svg>
+  <a class="skip" href="#main" data-i18n="skip">Preskoči na sadržaj</a>
+
+  <!-- ============ Navigacija ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <a class="nav__brand" href="#top" aria-label="Stefan Stević, na vrh stranice" data-i18n-attr="aria-label:nav.brandLabel">Stefan Stević</a>
+
+      <nav class="nav__links" aria-label="Glavna navigacija" data-i18n-attr="aria-label:nav.label">
+        <a href="#radovi" data-i18n="nav.work">Radovi</a>
+        <a href="#usluge" data-i18n="nav.services">Usluge</a>
+        <a href="#proces" data-i18n="nav.process">Kako radim</a>
+        <a href="#o-meni" data-i18n="nav.about">O meni</a>
+      </nav>
+
+      <div class="nav__end">
+        <div class="lang" role="group" aria-label="Jezik" data-i18n-attr="aria-label:lang.label">
+          <button type="button" data-lang="sr" aria-pressed="true">SR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn--small nav__cta" href="#kontakt" data-i18n="nav.cta">Pišite mi</a>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+          <span data-i18n="nav.menu">Meni</span>
+          <span class="nav__toggle-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-menu>
+    <ul class="menu__links">
+      <li><a href="#radovi" data-i18n="nav.work">Radovi</a></li>
+      <li><a href="#usluge" data-i18n="nav.services">Usluge</a></li>
+      <li><a href="#proces" data-i18n="nav.process">Kako radim</a></li>
+      <li><a href="#o-meni" data-i18n="nav.about">O meni</a></li>
+      <li><a href="#kontakt" data-i18n="nav.contact">Kontakt</a></li>
+    </ul>
+    <div class="menu__quick">
+      <a class="menu__phone" href="tel:+381645580188">064 558 0188</a>
+      <ul class="quick quick--menu" aria-label="Brz kontakt" data-i18n-attr="aria-label:quick.label">
+        <li><a class="quick__btn quick__btn--wa" href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" data-tip="WhatsApp" aria-label="WhatsApp, 064 558 0188" data-i18n-attr="href:wa.href|aria-label:quick.wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+        <li><a class="quick__btn quick__btn--viber" href="viber://chat?number=%2B381645580188" data-tip="Viber" aria-label="Viber, 064 558 0188" data-i18n-attr="aria-label:quick.viber"><svg aria-hidden="true"><use href="#i-viber"/></svg></a></li>
+        <li><a class="quick__btn quick__btn--ig" href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener" data-tip="Instagram" aria-label="Instagram, @stevke30"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+      </ul>
+    </div>
+    <div class="menu__foot">
+      <a href="mailto:stefanstevicoz30@gmail.com">stefanstevicoz30@gmail.com</a>
+      <div class="lang" role="group" aria-label="Jezik" data-i18n-attr="aria-label:lang.label">
+        <button type="button" data-lang="sr" aria-pressed="true">SR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top" data-hero>
+      <div class="hero__inner" data-hero-inner>
+        <h1 class="hero__name">
+          <span class="sr-only" data-i18n="hero.h1">Stefan Stević, web developer iz Obrenovca</span>
+          <span class="hero__line hero__line--1" aria-hidden="true" data-kinetic>Stefan</span>
+          <span class="hero__line hero__line--2" aria-hidden="true" data-kinetic>Stević</span>
+        </h1>
+
+        <figure class="hero__figure" data-hero-figure>
+          <div class="hero__figure-move" data-figure-move>
+            <picture>
+              <source type="image/avif"
+                      srcset="img/stefan-hero-600.avif 600w, img/stefan-hero-720.avif 720w, img/stefan-hero-890.avif 890w"
+                      sizes="(min-width: 1024px) 56vw, 120vw">
+              <img src="img/stefan-hero-890.webp"
+                   srcset="img/stefan-hero-600.webp 600w, img/stefan-hero-720.webp 720w, img/stefan-hero-890.webp 890w"
+                   sizes="(min-width: 1024px) 56vw, 120vw"
+                   width="890" height="1660"
+                   alt="Stefan Stević u plavom sakou"
+                   data-i18n-attr="alt:hero.alt"
+                   fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+        </figure>
+
+        <div class="hero__bottom">
+          <p class="hero__lede" data-intro data-i18n="hero.lede">Web developer iz Obrenovca. Pravim sajtove i web aplikacije za firme koje žele više upita, poziva i rezervacija.</p>
+          <div class="hero__actions" data-intro>
+            <a class="cta" href="#kontakt" data-magnetic><span class="cta__text" data-i18n="hero.cta">Zatražite ponudu</span><span class="cta__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span></a>
+            <a class="btn btn--line hero__work" href="#radovi" data-i18n="hero.cta2">Pogledajte radove</a>
+          </div>
+          <ul class="quick hero__quick" data-intro aria-label="Brz kontakt" data-i18n-attr="aria-label:quick.label">
+            <li><a class="quick__btn quick__btn--wa" href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" data-tip="WhatsApp" aria-label="WhatsApp, 064 558 0188" data-i18n-attr="href:wa.href|aria-label:quick.wa"><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+            <li><a class="quick__btn quick__btn--viber" href="viber://chat?number=%2B381645580188" data-tip="Viber" aria-label="Viber, 064 558 0188" data-i18n-attr="aria-label:quick.viber"><svg aria-hidden="true"><use href="#i-viber"/></svg></a></li>
+            <li><a class="quick__btn quick__btn--ig" href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener" data-tip="Instagram" aria-label="Instagram, @stevke30"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+          </ul>
+          <p class="hero__status" data-intro>
+            <strong><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.status">Primam nove projekte</span></strong>
+            <span class="hero__where" data-i18n="hero.where">Obrenovac i Beograd, uživo ili online</span>
+          </p>
+        </div>
+      </div>
+      <div class="hero__shade" data-hero-shade aria-hidden="true"></div>
+      <div class="hero__curtain" data-curtain aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ Uvod ============ -->
+    <section class="section intro" id="uvod" data-theme="#f3f1ec">
+      <div class="wrap intro__grid">
+        <h2 class="intro__title" data-i18n="intro.title">Sajt ne treba samo da bude lep. <mark class="hl" data-hl>Treba da donosi posao.</mark></h2>
+        <div class="intro__body">
+          <p data-i18n="intro.p1">Za većinu firmi sajt je prvo mesto gde ih klijent upozna. Zato pazim na ono što posetilac vidi u prvih nekoliko sekundi: da odmah razume šta nudite, da se stranica brzo otvori na telefonu i da je poziv ili upit udaljen jedan dodir.</p>
+          <p data-i18n="intro.p2">Ostalo je zanat: čist kod, osnova za Google pretragu od prvog dana i sajt koji se lako održava.</p>
+        </div>
+        <div class="clients">
+          <p class="clients__label" data-i18n="intro.clients">Sajtove sam radio za</p>
+          <ul class="clients__list">
+            <li><a href="#modus"><span>Modus Gradnja</span><span class="clients__n">01</span></a></li>
+            <li><a href="#naizlet"><span>Na Izlet</span><span class="clients__n">02</span></a></li>
+            <li><a href="#leto"><span>Leto u Turskoj</span><span class="clients__n">03</span></a></li>
+            <li><a href="#tomasevacka"><span>Tomaševačka</span><span class="clients__n">04</span></a></li>
+            <li><a href="#proklima"><span>PRO KLIMA Obrenovac</span><span class="clients__n">05</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Radovi ============ -->
+    <section class="section work" id="radovi" data-work data-theme="#141518">
+      <div class="wrap">
+        <header class="work__head">
+          <h2 class="section-title"><span data-i18n="work.title">Izabrani radovi</span><sup class="count">05</sup></h2>
+          <p class="work__sub" data-i18n="work.sub">Pet projekata, pet različitih zadataka. Klik na ekran otvara sajt uživo.</p>
+        </header>
+
+        <!-- Modus Gradnja -->
+        <article class="project" id="modus" data-project data-bg="#141518" data-accent="#c9a86a">
+          <div class="project__info">
+            <p class="project__index" aria-hidden="true"><span>01</span> / 05</p>
+            <h3 class="project__title">Modus Gradnja</h3>
+            <p class="project__kind" data-i18n="modus.kind">Investitor i izvođač stambenih objekata</p>
+            <dl class="project__meta">
+              <dt data-i18n="meta.year">Godina</dt><dd>2026</dd>
+              <dt data-i18n="meta.role">Uloga</dt><dd data-i18n="modus.role">Dizajn, razvoj i održavanje</dd>
+            </dl>
+            <p class="project__text" data-i18n="modus.text">Firma prodaje stanove iz sopstvene investicije i trebalo joj je da kupac sam pronađe stan, bez slanja PDF-ova i čekanja na odgovor. Napravio sam sajt oko 3D modela zgrade: kupac okreće objekat, bira sprat i stan i odmah vidi strukturu, kvadraturu i cenu.</p>
+            <ul class="project__facts">
+              <li data-i18n="modus.f1">3D model generisan kodom u Three.js-u, bez teških 3D fajlova</li>
+              <li data-i18n="modus.f2">2D osnova sprata sinhronizovana sa 3D prikazom, u oba smera</li>
+              <li data-i18n="modus.f3">70 stanova, svaki sa svojom stranicom, prodajnim listom i formom za upit</li>
+              <li data-i18n="modus.f4">Mesečno održavanje: ažuriram cene i dostupnost stanova</li>
+            </ul>
+            <ul class="project__stack" aria-label="Tehnologije" data-i18n-attr="aria-label:meta.stack">
+              <li>Three.js</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>JSON-LD</li>
+            </ul>
+            <a class="project__link" href="https://modusgradnja.rs" target="_blank" rel="noopener"><span>modusgradnja.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <a class="shot shot--browser" href="https://modusgradnja.rs" target="_blank" rel="noopener" data-cursor>
+              <span class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__url">modusgradnja.rs</span></span>
+              <img src="img/work/modus-desktop-1366.webp" srcset="img/work/modus-desktop-760.webp 760w, img/work/modus-desktop-1366.webp 1366w" sizes="(min-width: 1024px) 56vw, 92vw" width="1366" height="854" alt="Početna stranica sajta Modus Gradnja" data-i18n-attr="alt:modus.alt1" loading="lazy" decoding="async">
+            </a>
+            <div class="project__pair">
+              <div class="phone" data-depth style="--sb:#111317;--sb-fg:#fff">
+                <div class="phone__screen">
+                  <span class="phone__bar" aria-hidden="true"><span class="phone__time">9:41</span><i class="phone__island"></i><span class="phone__sys"><i></i><b></b></span></span>
+                  <img src="img/work/modus-mobile-780.webp" srcset="img/work/modus-mobile-420.webp 420w, img/work/modus-mobile-780.webp 780w" sizes="(min-width: 1024px) 18vw, 42vw" width="780" height="1688" alt="Modus Gradnja na telefonu" data-i18n-attr="alt:modus.alt2" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <figure class="detail">
+                <div class="shot"><img src="img/work/modus-config-1226.webp" srcset="img/work/modus-config-760.webp 760w, img/work/modus-config-1226.webp 1226w" sizes="(min-width: 1024px) 38vw, 52vw" width="1226" height="636" alt="3D konfigurator stanova sa osnovom sprata" data-i18n-attr="alt:modus.alt3" loading="lazy" decoding="async"></div>
+                <figcaption class="media-caption" data-i18n="modus.cap">Konfigurator: izabran drugi sprat, šematska osnova i lista stanova sa cenama.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Na Izlet -->
+        <article class="project project--flip" id="naizlet" data-project data-bg="#0d2133" data-accent="#f2803b">
+          <div class="project__info">
+            <p class="project__index" aria-hidden="true"><span>02</span> / 05</p>
+            <h3 class="project__title">Na Izlet</h3>
+            <p class="project__kind" data-i18n="naizlet.kind">Turistička agencija, Beograd</p>
+            <dl class="project__meta">
+              <dt data-i18n="meta.year">Godina</dt><dd>2026</dd>
+              <dt data-i18n="meta.role">Uloga</dt><dd data-i18n="naizlet.role">Redizajn i razvoj</dd>
+            </dl>
+            <p class="project__text" data-i18n="naizlet.text">Agencija organizuje izlete i putovanja po Evropi, a stari WordPress sajt je bio spor na telefonu i težak za ažuriranje polazaka. Novi sajt je napravljen od nule u Next.js-u, sa admin panelom u kom agencija sama unosi izlete, termine i cene.</p>
+            <ul class="project__facts">
+              <li data-i18n="naizlet.f1">Kalendar polazaka i prijave za putovanja</li>
+              <li data-i18n="naizlet.f2">Sistem rezervacija sa rasporedom sedišta u autobusu</li>
+              <li data-i18n="naizlet.f3">PDF dokumenta, blog i stranice destinacija</li>
+              <li data-i18n="naizlet.f4">Strukturirani podaci za Google, AVIF slike, automatska mapa sajta</li>
+            </ul>
+            <ul class="project__stack" aria-label="Tehnologije" data-i18n-attr="aria-label:meta.stack">
+              <li>Next.js</li><li>React</li><li>TypeScript</li><li>Supabase</li><li>Vercel</li>
+            </ul>
+            <a class="project__link" href="https://naizlet.rs" target="_blank" rel="noopener"><span>naizlet.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <a class="shot shot--browser" href="https://naizlet.rs" target="_blank" rel="noopener" data-cursor>
+              <span class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__url">naizlet.rs</span></span>
+              <img src="img/work/naizlet-cards-1366.webp" srcset="img/work/naizlet-cards-760.webp 760w, img/work/naizlet-cards-1366.webp 1366w" sizes="(min-width: 1024px) 56vw, 92vw" width="1366" height="854" alt="Kalendar putovanja na sajtu Na Izlet" data-i18n-attr="alt:naizlet.alt1" loading="lazy" decoding="async">
+            </a>
+            <div class="project__pair">
+              <div class="phone" data-depth style="--sb:#103751;--sb-fg:#fff">
+                <div class="phone__screen">
+                  <span class="phone__bar" aria-hidden="true"><span class="phone__time">9:41</span><i class="phone__island"></i><span class="phone__sys"><i></i><b></b></span></span>
+                  <img src="img/work/naizlet-mobile-780.webp" srcset="img/work/naizlet-mobile-420.webp 420w, img/work/naizlet-mobile-780.webp 780w" sizes="(min-width: 1024px) 18vw, 42vw" width="780" height="1688" alt="Na Izlet na telefonu" data-i18n-attr="alt:naizlet.alt2" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <figure class="detail">
+                <div class="shot"><img src="img/work/naizlet-trip-1366.webp" srcset="img/work/naizlet-trip-760.webp 760w, img/work/naizlet-trip-1366.webp 1366w" sizes="(min-width: 1024px) 38vw, 52vw" width="1366" height="854" alt="Stranica putovanja sa cenom i terminom" data-i18n-attr="alt:naizlet.alt3" loading="lazy" decoding="async"></div>
+                <figcaption class="media-caption" data-i18n="naizlet.cap">Stranica putovanja: program, cena, sledeći termin i prijava na jednom mestu.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Leto u Turskoj -->
+        <article class="project" id="leto" data-project data-bg="#0c1c30" data-accent="#ffab2e">
+          <div class="project__info">
+            <p class="project__index" aria-hidden="true"><span>03</span> / 05</p>
+            <h3 class="project__title">Leto u Turskoj</h3>
+            <p class="project__kind" data-i18n="leto.kind">Turistička agencija za putovanja u Tursku</p>
+            <dl class="project__meta">
+              <dt data-i18n="meta.year">Godina</dt><dd>2026</dd>
+              <dt data-i18n="meta.role">Uloga</dt><dd data-i18n="leto.role">Dizajn i razvoj</dd>
+            </dl>
+            <p class="project__text" data-i18n="leto.text">Agencija prodaje samo Tursku, pa sajt mora brzo da pokaže ponude i termine. Dvojezični sajt ima ponude u poslednjem trenutku sa brojem dana do polaska, destinacije sa filterima po tipu odmora i blog.</p>
+            <ul class="project__facts">
+              <li data-i18n="leto.f1">Srpski i engleski na istom sajtu</li>
+              <li data-i18n="leto.f2">Ponude koje pokazuju koliko je dana ostalo do polaska</li>
+              <li data-i18n="leto.f3">Lighthouse SEO ocena 100 na mobilnom</li>
+            </ul>
+            <ul class="project__stack" aria-label="Tehnologije" data-i18n-attr="aria-label:meta.stack">
+              <li>Next.js</li><li>React</li><li>Vercel</li>
+            </ul>
+            <a class="project__link" href="https://letouturskoj.rs" target="_blank" rel="noopener"><span>letouturskoj.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <a class="shot shot--browser" href="https://letouturskoj.rs" target="_blank" rel="noopener" data-cursor>
+              <span class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__url">letouturskoj.rs</span></span>
+              <img src="img/work/leto-dest-1366.webp" srcset="img/work/leto-dest-760.webp 760w, img/work/leto-dest-1366.webp 1366w" sizes="(min-width: 1024px) 56vw, 92vw" width="1366" height="854" alt="Destinacije sa filterima na sajtu Leto u Turskoj" data-i18n-attr="alt:leto.alt1" loading="lazy" decoding="async">
+            </a>
+            <div class="project__pair">
+              <div class="phone" data-depth style="--sb:#141f3a;--sb-fg:#fff">
+                <div class="phone__screen">
+                  <span class="phone__bar" aria-hidden="true"><span class="phone__time">9:41</span><i class="phone__island"></i><span class="phone__sys"><i></i><b></b></span></span>
+                  <img src="img/work/leto-mobile-780.webp" srcset="img/work/leto-mobile-420.webp 420w, img/work/leto-mobile-780.webp 780w" sizes="(min-width: 1024px) 18vw, 42vw" width="780" height="1688" alt="Leto u Turskoj na telefonu" data-i18n-attr="alt:leto.alt2" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <figure class="detail">
+                <div class="shot"><img src="img/work/leto-hero-1366.webp" srcset="img/work/leto-hero-760.webp 760w, img/work/leto-hero-1366.webp 1366w" sizes="(min-width: 1024px) 38vw, 52vw" width="1366" height="612" alt="Početni ekran sajta Leto u Turskoj" data-i18n-attr="alt:leto.alt3" loading="lazy" decoding="async"></div>
+                <figcaption class="media-caption" data-i18n="leto.cap">Početni ekran: jedna poruka, jedno dugme i izbor letovanja avionom ili autobusom.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tomaševačka -->
+        <article class="project project--flip" id="tomasevacka" data-project data-bg="#1c1511" data-accent="#dcaa5e">
+          <div class="project__info">
+            <p class="project__index" aria-hidden="true"><span>04</span> / 05</p>
+            <h3 class="project__title">Tomaševačka</h3>
+            <p class="project__kind" data-i18n="toma.kind">Domaća voćna rakija iz Tomaševca</p>
+            <dl class="project__meta">
+              <dt data-i18n="meta.year">Godina</dt><dd>2026</dd>
+              <dt data-i18n="meta.role">Uloga</dt><dd data-i18n="toma.role">Koncept, dizajn i razvoj</dd>
+            </dl>
+            <p class="project__text" data-i18n="toma.text">Landing stranica na ćirilici za domaću rakiju. Video se ne pušta, nego se skroluje kadar po kadar: 121 kadar, od flaše do gutljaja, ide tačno onoliko brzo koliko posetilac skroluje, a boja cele stranice prati kadar u realnom vremenu.</p>
+            <ul class="project__facts">
+              <li data-i18n="toma.f1">121 kadar izvučen iz videa, posebna lakša sekvenca za telefone</li>
+              <li data-i18n="toma.f2">Sedam ukusa sa podacima prepisanim sa etiketa</li>
+              <li data-i18n="toma.f3">Poručivanje telefonom i preko Vibera</li>
+            </ul>
+            <ul class="project__stack" aria-label="Tehnologije" data-i18n-attr="aria-label:meta.stack">
+              <li>JavaScript</li><li>Canvas</li><li>HTML</li><li>CSS</li><li>ffmpeg</li>
+            </ul>
+            <a class="project__link" href="https://cheef30.github.io/tomasevacka/" target="_blank" rel="noopener"><span data-i18n="toma.link">Pogledajte sajt</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <a class="shot shot--browser" href="https://cheef30.github.io/tomasevacka/" target="_blank" rel="noopener" data-cursor>
+              <span class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__url">cheef30.github.io/tomasevacka</span></span>
+              <img src="img/work/toma-pour-1366.webp" srcset="img/work/toma-pour-760.webp 760w, img/work/toma-pour-1366.webp 1366w" sizes="(min-width: 1024px) 56vw, 92vw" width="1366" height="854" alt="Kadar 68 od 121: rakija se sipa u čašu" data-i18n-attr="alt:toma.alt1" loading="lazy" decoding="async">
+            </a>
+            <div class="project__pair">
+              <div class="phone" data-depth style="--sb:#1c1511;--sb-fg:#fff">
+                <div class="phone__screen">
+                  <span class="phone__bar" aria-hidden="true"><span class="phone__time">9:41</span><i class="phone__island"></i><span class="phone__sys"><i></i><b></b></span></span>
+                  <img src="img/work/toma-mobile-780.webp" srcset="img/work/toma-mobile-420.webp 420w, img/work/toma-mobile-780.webp 780w" sizes="(min-width: 1024px) 18vw, 42vw" width="780" height="1688" alt="Tomaševačka na telefonu" data-i18n-attr="alt:toma.alt2" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <figure class="detail">
+                <div class="shot"><img src="img/work/toma-desktop-1366.webp" srcset="img/work/toma-desktop-760.webp 760w, img/work/toma-desktop-1366.webp 1366w" sizes="(min-width: 1024px) 38vw, 52vw" width="1366" height="854" alt="Početni ekran sa nazivom na ćirilici" data-i18n-attr="alt:toma.alt3" loading="lazy" decoding="async"></div>
+                <figcaption class="media-caption" data-i18n="toma.cap">Početni ekran. Ceo sajt je na ćirilici, uključujući navigaciju i dugmad.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRO KLIMA -->
+        <article class="project" id="proklima" data-project data-bg="#0a1530" data-accent="#5b9bff">
+          <div class="project__info">
+            <p class="project__index" aria-hidden="true"><span>05</span> / 05</p>
+            <h3 class="project__title">PRO KLIMA Obrenovac</h3>
+            <p class="project__kind" data-i18n="pro.kind">Ugradnja i servis klima uređaja</p>
+            <dl class="project__meta">
+              <dt data-i18n="meta.year">Godina</dt><dd>2026</dd>
+              <dt data-i18n="meta.role">Uloga</dt><dd data-i18n="pro.role">Redizajn sajta, u toku</dd>
+            </dl>
+            <p class="project__text" data-i18n="pro.text">Lokalna firma kojoj sajt treba da uradi jednu stvar: da posetilac za par sekundi vidi šta firma radi i pozove. Redizajn stavlja telefon, WhatsApp i Viber na svaki ekran, a usluge i fotografije sa terena odmah ispod.</p>
+            <ul class="project__facts">
+              <li data-i18n="pro.f1">Poziv, WhatsApp i Viber na jedan dodir</li>
+              <li data-i18n="pro.f2">Galerija radova sa terena</li>
+              <li data-i18n="pro.f3">Posebne stranice za usluge, radove i kontakt</li>
+            </ul>
+            <ul class="project__stack" aria-label="Tehnologije" data-i18n-attr="aria-label:meta.stack">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+            <a class="project__link" href="https://cheef30.github.io/proklima-obrenovac/" target="_blank" rel="noopener"><span data-i18n="pro.link">Pogledajte pregled redizajna</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+          </div>
+          <div class="project__media">
+            <a class="shot shot--browser" href="https://cheef30.github.io/proklima-obrenovac/" target="_blank" rel="noopener" data-cursor>
+              <span class="shot__bar"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__url">cheef30.github.io/proklima-obrenovac</span></span>
+              <img src="img/work/proklima-desktop-1366.webp" srcset="img/work/proklima-desktop-760.webp 760w, img/work/proklima-desktop-1366.webp 1366w" sizes="(min-width: 1024px) 56vw, 92vw" width="1366" height="854" alt="Početna stranica redizajna za PRO KLIMA" data-i18n-attr="alt:pro.alt1" loading="lazy" decoding="async">
+            </a>
+            <div class="project__pair">
+              <div class="phone" data-depth style="--sb:#ffffff;--sb-fg:#0b1324">
+                <div class="phone__screen">
+                  <span class="phone__bar" aria-hidden="true"><span class="phone__time">9:41</span><i class="phone__island"></i><span class="phone__sys"><i></i><b></b></span></span>
+                  <img src="img/work/proklima-mobile-780.webp" srcset="img/work/proklima-mobile-420.webp 420w, img/work/proklima-mobile-780.webp 780w" sizes="(min-width: 1024px) 18vw, 50vw" width="780" height="1688" alt="PRO KLIMA na telefonu, sa dugmetom za poziv" data-i18n-attr="alt:pro.alt2" loading="lazy" decoding="async">
+                </div>
+              </div>
+              <figure class="detail">
+                <div class="shot"><img src="img/work/proklima-gallery-1366.webp" srcset="img/work/proklima-gallery-760.webp 760w, img/work/proklima-gallery-1366.webp 1366w" sizes="(min-width: 1024px) 38vw, 52vw" width="1366" height="854" alt="Galerija radova sa filterima po vrsti posla" data-i18n-attr="alt:pro.alt3" loading="lazy" decoding="async"></div>
+                <figcaption class="media-caption" data-i18n="pro.cap">Galerija sa terena: 41 urađen posao, sa filterima po vrsti posla.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Još radova ============ -->
+    <section class="section archive" id="arhiva" data-archive data-theme="#121628">
+      <div class="wrap">
+        <header class="archive__head">
+          <h2 class="section-title"><span data-i18n="archive.title">Još radova</span><sup class="count">05</sup></h2>
+          <p class="archive__sub" data-i18n="archive.sub">Manji projekti, koncepti i stvari koje sam napravio za sebe.</p>
+        </header>
+        <ul class="archive__list">
+          <li>
+            <a class="archive__row" href="https://cheef30.github.io/misterstailoredevents/" target="_blank" rel="noopener" data-preview="img/work/misters-desktop-760.webp">
+              <span class="archive__thumb"><img src="img/work/misters-desktop-760.webp" width="760" height="475" alt="" loading="lazy" decoding="async"></span>
+              <span class="archive__name">Mister S Tailored Events</span>
+              <span class="archive__desc" data-i18n="arch.misters">Dvojezični sajt za prostor za događaje u centru Beograda</span>
+              <span class="archive__tag" data-i18n="tag.progress">U izradi</span>
+              <span class="archive__year">2026</span>
+              <svg class="archive__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="archive__row" href="https://cheef30.github.io/" target="_blank" rel="noopener" data-preview="img/work/rotten-desktop-760.webp">
+              <span class="archive__thumb"><img src="img/work/rotten-desktop-760.webp" width="760" height="475" alt="" loading="lazy" decoding="async"></span>
+              <span class="archive__name">Rotten Cherry Co.</span>
+              <span class="archive__desc" data-i18n="arch.rotten">Portfolio fotografa sa admin panelom, tema mog diplomskog rada</span>
+              <span class="archive__tag" data-i18n="tag.thesis">Diplomski</span>
+              <span class="archive__year">2026</span>
+              <svg class="archive__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="archive__row" href="https://cheef30.github.io/auto-skola-start/" target="_blank" rel="noopener" data-preview="img/work/autoskola-desktop-760.webp">
+              <span class="archive__thumb"><img src="img/work/autoskola-desktop-760.webp" width="760" height="475" alt="" loading="lazy" decoding="async"></span>
+              <span class="archive__name">Auto škola START</span>
+              <span class="archive__desc" data-i18n="arch.auto">Predlog novog sajta za auto školu iz Obrenovca</span>
+              <span class="archive__tag" data-i18n="tag.concept">Koncept</span>
+              <span class="archive__year">2026</span>
+              <svg class="archive__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="archive__row" href="https://cheef30.github.io/demo-cafe/" target="_blank" rel="noopener" data-preview="img/work/ember-desktop-760.webp">
+              <span class="archive__thumb"><img src="img/work/ember-desktop-760.webp" width="760" height="475" alt="" loading="lazy" decoding="async"></span>
+              <span class="archive__name">Ember &amp; Oak</span>
+              <span class="archive__desc" data-i18n="arch.ember">Koncept sajta za kafeteriju, sa menijem i rezervacijama</span>
+              <span class="archive__tag" data-i18n="tag.concept">Koncept</span>
+              <span class="archive__year">2026</span>
+              <svg class="archive__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="archive__row" href="https://cheef30.github.io/solo-leveling-tracker/" target="_blank" rel="noopener" data-preview="img/work/sistem-mobile-420.webp" data-preview-tall>
+              <span class="archive__thumb"><img src="img/work/sistem-mobile-420.webp" width="420" height="909" alt="" loading="lazy" decoding="async"></span>
+              <span class="archive__name">SISTEM</span>
+              <span class="archive__desc" data-i18n="arch.sistem">Lična aplikacija za praćenje treninga, radi i bez interneta</span>
+              <span class="archive__tag">PWA</span>
+              <span class="archive__year">2026</span>
+              <svg class="archive__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="archive__preview" data-preview-box aria-hidden="true"><img alt="" decoding="async"></div>
+    </section>
+
+    <!-- ============ Usluge ============ -->
+    <section class="section services" id="usluge" data-theme="#f3f1ec">
+      <div class="wrap">
+        <header class="services__head">
+          <h2 class="section-title" data-i18n="services.title">Šta mogu da uradim za vas</h2>
+          <p class="services__sub" data-i18n="services.sub">Svaki projekat počinje razgovorom, a cenu i rok znate pre nego što krenem.</p>
+        </header>
+        <ul class="services__list">
+          <li class="service" data-service>
+            <h3>
+              <button class="service__toggle" type="button" aria-expanded="false" aria-controls="s-1" id="s-1-btn">
+                <span class="service__title" data-i18n="s1.title">Sajt za firmu</span>
+                <span class="service__summary" data-i18n="s1.sum">Za firme koje žele da ih klijenti nađu, razumeju i pozovu.</span>
+                <span class="service__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="service__panel" id="s-1" role="region" aria-labelledby="s-1-btn">
+              <div class="service__inner">
+                <div class="service__content">
+                  <div class="service__lead">
+                    <p data-i18n="s1.body">Prezentacioni sajt ili landing stranica, dizajniran za vašu firmu, a ne preuzet iz šablona.</p>
+                    <a class="ask" href="#upit" data-pick="Sajt za firmu"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                  <ul>
+                    <li data-i18n="s1.l1">Dizajn po meri vaše firme</li>
+                    <li data-i18n="s1.l2">Prilagođen telefonima i tabletima</li>
+                    <li data-i18n="s1.l3">Dugmad za poziv, WhatsApp i Viber</li>
+                    <li data-i18n="s1.l4">Google mapa i kontakt forma</li>
+                    <li data-i18n="s1.l5">Osnova za Google pretragu</li>
+                    <li data-i18n="s1.l6">Pomoć oko domena i hostinga</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="service" data-service>
+            <h3>
+              <button class="service__toggle" type="button" aria-expanded="false" aria-controls="s-2" id="s-2-btn">
+                <span class="service__title" data-i18n="s2.title">Web aplikacija</span>
+                <span class="service__summary" data-i18n="s2.sum">Kada sajt treba da radi deo posla umesto vas.</span>
+                <span class="service__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="service__panel" id="s-2" role="region" aria-labelledby="s-2-btn">
+              <div class="service__inner">
+                <div class="service__content">
+                  <div class="service__lead">
+                    <p data-i18n="s2.body">Rezervacije, kalendari, admin panel za cene i ponude, nalozi korisnika i baza podataka. Kao kod agencije Na Izlet, gde se izleti i termini unose bez programera.</p>
+                    <a class="ask" href="#upit" data-pick="Web aplikacija"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                  <ul>
+                    <li data-i18n="s2.l1">Next.js, React i TypeScript</li>
+                    <li data-i18n="s2.l2">Baza i prijava preko Supabase-a</li>
+                    <li data-i18n="s2.l3">Admin panel na srpskom</li>
+                    <li data-i18n="s2.l4">PDF dokumenta i obaveštenja mejlom</li>
+                    <li data-i18n="s2.l5">Obuka za korišćenje</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="service" data-service>
+            <h3>
+              <button class="service__toggle" type="button" aria-expanded="false" aria-controls="s-3" id="s-3-btn">
+                <span class="service__title" data-i18n="s3.title">3D i animacije</span>
+                <span class="service__summary" data-i18n="s3.sum">Za proizvode i prostore koje treba videti, a ne samo opisati.</span>
+                <span class="service__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="service__panel" id="s-3" role="region" aria-labelledby="s-3-btn">
+              <div class="service__inner">
+                <div class="service__content">
+                  <div class="service__lead">
+                    <p data-i18n="s3.body">3D konfiguratori, animacije vezane za skrol i interaktivni prikazi koji ostaju u sećanju, kao zgrada Modus Gradnje ili rakija koja se sipa dok skrolujete.</p>
+                    <a class="ask" href="#upit" data-pick="3D i animacije"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                  <ul>
+                    <li data-i18n="s3.l1">3D modeli u Three.js-u</li>
+                    <li data-i18n="s3.l2">Animacije sa GSAP-om</li>
+                    <li data-i18n="s3.l3">Optimizovano da radi glatko i na telefonu</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="service" data-service>
+            <h3>
+              <button class="service__toggle" type="button" aria-expanded="false" aria-controls="s-4" id="s-4-btn">
+                <span class="service__title" data-i18n="s4.title">Održavanje</span>
+                <span class="service__summary" data-i18n="s4.sum">Vi pošaljete poruku, ja izmenim.</span>
+                <span class="service__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="service__panel" id="s-4" role="region" aria-labelledby="s-4-btn">
+              <div class="service__inner">
+                <div class="service__content">
+                  <div class="service__lead">
+                    <p data-i18n="s4.body">Mesečno održavanje za sajtove koje sam napravio ili preuzimam od drugih: izmene sadržaja i cena, ispravke i redovne provere.</p>
+                    <a class="ask" href="#upit" data-pick="Održavanje"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                  <ul>
+                    <li data-i18n="s4.l1">Izmene teksta, slika i cena</li>
+                    <li data-i18n="s4.l2">Ispravke i tehnička podrška</li>
+                    <li data-i18n="s4.l3">Provera brzine i ispravnosti sajta</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Proces ============ -->
+    <section class="section process" id="proces" data-process data-theme="#121628">
+      <div class="wrap">
+        <header class="process__head">
+          <h2 class="section-title" data-i18n="process.title">Kako radim</h2>
+          <p class="process__sub" data-i18n="process.sub">Četiri koraka, bez iznenađenja. Uvek znate šta sledi i koliko traje.</p>
+        </header>
+        <div class="process__body" data-steps>
+        <div class="process__track" aria-hidden="true"><span class="process__fill" data-fill></span></div>
+        <ol class="process__steps">
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="p1.title">Razgovor</h3>
+            <p class="step__time" data-i18n="p1.time">Besplatno</p>
+            <p class="step__text" data-i18n="p1.text">Kratak poziv ili sastanak u Obrenovcu ili Beogradu. Pričamo o vašoj firmi, klijentima i tome šta sajt treba da postigne. Posle razgovora dobijate predlog sa cenom i rokom.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title" data-i18n="p2.title">Dizajn</h3>
+            <p class="step__time" data-i18n="p2.time">Oko nedelju dana</p>
+            <p class="step__text" data-i18n="p2.text">Pravim strukturu i izgled sajta i šaljem vam ga kao radnu verziju u browseru. Vi komentarišete, a izmene dogovaramo pre nego što krenem u izradu.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title" data-i18n="p3.title">Izrada</h3>
+            <p class="step__time" data-i18n="p3.time">Od 1 do 3 nedelje</p>
+            <p class="step__text" data-i18n="p3.text">Programiram sajt, ubacujem tekstove i fotografije i testiram ga na telefonima, tabletima i računarima.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">04</span>
+            <h3 class="step__title" data-i18n="p4.title">Lansiranje</h3>
+            <p class="step__time" data-i18n="p4.time">Jedan dan</p>
+            <p class="step__text" data-i18n="p4.text">Povezujem domen, prijavljujem sajt Google-u i predajem vam pristupe. Posle lansiranja ostajem tu za izmene i održavanje.</p>
+          </li>
+        </ol>
+        </div>
+        <div class="process__cta">
+          <p class="process__cta-text" data-i18n="process.ctaText">Prvi korak je kratak razgovor, bez obaveze. Posle njega znate cenu i rok.</p>
+          <a class="cta cta--sun" href="#kontakt" data-magnetic><span class="cta__text" data-i18n="process.cta">Zakažite razgovor</span><span class="cta__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ O meni ============ -->
+    <section class="section about" id="o-meni" data-theme="#f3f1ec">
+      <div class="wrap about__grid">
+        <figure class="about__photo">
+          <div class="about__frame">
+            <img src="img/stefan-summit-1000.webp" srcset="img/stefan-summit-640.webp 640w, img/stefan-summit-1000.webp 1000w" sizes="(min-width: 1024px) 38vw, 92vw" width="1000" height="1250" alt="Stefan Stević na Phygital Sports Summitu u Abu Dabiju" data-i18n-attr="alt:about.alt1" loading="lazy" decoding="async" data-parallax>
+          </div>
+          <figcaption class="about__caption" data-i18n="about.cap1">Phygital Sports Summit, Abu Dabi, decembar 2025.</figcaption>
+        </figure>
+        <div class="about__text">
+          <h2 class="section-title" data-i18n="about.title">Zdravo, ja sam Stefan.</h2>
+          <p class="about__lead" data-i18n="about.p1">Web developer sam iz Obrenovca. Pre nego što sam se posvetio izradi sajtova, radio sam u marketing agenciji Hero Advertising i u esport savezu SESE, gde sam učestvovao na međunarodnim događajima i kongresima, od Abu Dabija do Malezije.</p>
+          <p data-i18n="about.p2">Iz marketinga sam poneo naviku da sajt gledam kao alat za prodaju: šta posetilac mora da vidi, da razume i gde da klikne. Zato pre prve linije koda pitam koga sajt treba da ubedi i u šta.</p>
+          <p data-i18n="about.p3">Danas pravim sajtove i web aplikacije za firme, od 3D prikaza stanova do sistema za rezervacije. Radite direktno sa mnom, bez posrednika: osoba sa kojom razgovarate je osoba koja piše kod.</p>
+          <dl class="facts">
+            <dt data-i18n="about.k1">Lokacija</dt><dd data-i18n="about.v1">Obrenovac, Beograd</dd>
+            <dt data-i18n="about.k2">Jezici</dt><dd data-i18n="about.v2">Srpski, engleski</dd>
+            <dt data-i18n="about.k3">Studije</dt><dd data-i18n="about.v3">Akademija tehničko-umetničkih strukovnih studija Beograd (VIŠER)</dd>
+            <dt data-i18n="about.k4">Alati</dt><dd>Next.js, React, TypeScript, Supabase, Three.js, GSAP, Tailwind CSS, Vercel</dd>
+            <dt data-i18n="about.k5">Mreže</dt><dd class="facts__links"><a href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener">Instagram</a><a href="https://github.com/cheef30" target="_blank" rel="noopener">GitHub</a></dd>
+          </dl>
+          <figure class="about__congress">
+            <div class="about__frame">
+              <img src="img/stefan-congress-1200.webp" srcset="img/stefan-congress-640.webp 640w, img/stefan-congress-1200.webp 1200w" sizes="(min-width: 1024px) 44vw, 92vw" width="1200" height="900" alt="Stefan Stević na međunarodnom esport kongresu" data-i18n-attr="alt:about.alt2" loading="lazy" decoding="async">
+            </div>
+            <figcaption class="about__caption" data-i18n="about.cap2">Na međunarodnom esport kongresu u Maleziji, 2025.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Kontakt ============ -->
+    <section class="section contact" id="kontakt" data-theme="#fec834">
+      <div class="wrap">
+        <div class="contact__grid">
+          <div class="contact__direct">
+            <h2 class="contact__title" data-i18n="contact.title">Recite mi šta vam treba.</h2>
+            <p class="contact__intro" data-i18n="contact.intro">Opišite firmu i šta sajt treba da radi. Javiću vam se sa predlogom, okvirnom cenom i rokom.</p>
+            <p class="contact__fast"><span class="pulse" aria-hidden="true"></span><span data-i18n="contact.fast">Najbrže odgovaram na WhatsApp-u i Viberu, obično istog dana.</span></p>
+            <ul class="channels">
+              <li><a class="channel channel--wa" href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" data-i18n-attr="href:wa.href">
+                <span class="channel__icon"><svg aria-hidden="true"><use href="#i-wa"/></svg></span>
+                <span class="channel__name">WhatsApp</span>
+                <span class="channel__value" data-i18n="phone.display">064 558 0188</span>
+                <svg class="channel__arrow" aria-hidden="true"><use href="#i-out"/></svg>
+              </a></li>
+              <li><a class="channel channel--viber" href="viber://chat?number=%2B381645580188">
+                <span class="channel__icon"><svg aria-hidden="true"><use href="#i-viber"/></svg></span>
+                <span class="channel__name">Viber</span>
+                <span class="channel__value" data-i18n="phone.display">064 558 0188</span>
+                <svg class="channel__arrow" aria-hidden="true"><use href="#i-out"/></svg>
+              </a></li>
+              <li><a class="channel channel--ig" href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener">
+                <span class="channel__icon"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+                <span class="channel__name">Instagram</span>
+                <span class="channel__value">@stevke30</span>
+                <svg class="channel__arrow" aria-hidden="true"><use href="#i-out"/></svg>
+              </a></li>
+              <li><a class="channel channel--tel" href="tel:+381645580188">
+                <span class="channel__icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+                <span class="channel__name" data-i18n="ch.call">Pozovite</span>
+                <span class="channel__value" data-i18n="phone.display">064 558 0188</span>
+                <svg class="channel__arrow" aria-hidden="true"><use href="#i-out"/></svg>
+              </a></li>
+            </ul>
+            <div class="contact__mail">
+              <p class="contact__mail-label" data-i18n="contact.mailLabel">Ili mejlom:</p>
+              <a class="contact__email" href="mailto:stefanstevicoz30@gmail.com" data-email>stefanstevicoz30@gmail.com</a>
+              <button class="btn btn--line btn--small" type="button" data-copy="stefanstevicoz30@gmail.com" data-i18n="contact.copy">Kopiraj adresu</button>
+            </div>
+          </div>
+
+          <div class="contact__form" id="upit">
+          <p class="contact__form-title" data-i18n="contact.formTitle">Pošaljite upit</p>
+          <form class="form" action="https://formsubmit.co/stefanstevicoz30@gmail.com" method="POST" novalidate data-form>
+            <div class="field">
+              <label for="f-name" data-i18n="form.name">Ime i prezime</label>
+              <input id="f-name" name="ime" type="text" autocomplete="name" required>
+              <p class="field__error" data-error-for="f-name" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-company" data-i18n="form.company">Firma (nije obavezno)</label>
+              <input id="f-company" name="firma" type="text" autocomplete="organization">
+              <p class="field__error" aria-hidden="true"></p>
+            </div>
+            <div class="field">
+              <label for="f-contact" data-i18n="form.contact">Mejl ili telefon</label>
+              <input id="f-contact" name="kontakt" type="text" autocomplete="email" inputmode="email" required>
+              <p class="field__error" data-error-for="f-contact" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-type" data-i18n="form.type">Šta vam treba</label>
+              <select id="f-type" name="tip">
+                <option value="Sajt za firmu" data-i18n="s1.title">Sajt za firmu</option>
+                <option value="Web aplikacija" data-i18n="s2.title">Web aplikacija</option>
+                <option value="3D i animacije" data-i18n="s3.title">3D i animacije</option>
+                <option value="Održavanje" data-i18n="s4.title">Održavanje</option>
+                <option value="Nešto drugo" data-i18n="form.other">Nešto drugo</option>
+              </select>
+              <p class="field__error" aria-hidden="true"></p>
+            </div>
+            <div class="field field--full">
+              <label for="f-msg" data-i18n="form.msg">Poruka</label>
+              <textarea id="f-msg" name="poruka" rows="5" required placeholder="Npr. imamo firmu za ugradnju klima i treba nam sajt sa kog će nas ljudi zvati." data-i18n-attr="placeholder:form.msgPh"></textarea>
+              <p class="field__error" data-error-for="f-msg" aria-live="polite"></p>
+            </div>
+            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Novi upit sa portfolija">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <div class="form__foot">
+              <button class="cta cta--wide" type="submit"><span class="cta__text" data-i18n="form.send">Pošalji poruku</span><span class="cta__icon" aria-hidden="true"><svg><use href="#i-arrow"/></svg><svg><use href="#i-arrow"/></svg></span></button>
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <p class="footer__brand">Stefan Stević <span data-i18n="footer.role">Web developer, Obrenovac</span></p>
+      <ul class="footer__nav">
+        <li><a href="#radovi" data-i18n="nav.work">Radovi</a></li>
+        <li><a href="#usluge" data-i18n="nav.services">Usluge</a></li>
+        <li><a href="#proces" data-i18n="nav.process">Kako radim</a></li>
+        <li><a href="#o-meni" data-i18n="nav.about">O meni</a></li>
+      </ul>
+      <div class="footer__contact">
+        <p class="footer__time"><span data-i18n="footer.time">Vreme u Obrenovcu</span> <strong data-clock>--:--</strong></p>
+        <a class="footer__phone" href="tel:+381645580188">064 558 0188</a>
+        <a class="footer__mail" href="mailto:stefanstevicoz30@gmail.com">stefanstevicoz30@gmail.com</a>
+      </div>
+      <button class="footer__top" type="button" data-to-top>
+        <span data-i18n="footer.top">Nazad na vrh</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© 2026 Stefan Stević</span>
+      <ul class="social" aria-label="Društvene mreže i kontakt" data-i18n-attr="aria-label:footer.social">
+        <li><a href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" aria-label="WhatsApp" data-i18n-attr="href:wa.href"><svg aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+        <li><a href="viber://chat?number=%2B381645580188" aria-label="Viber"><svg aria-hidden="true"><use href="#i-viber"/></svg></a></li>
+        <li><a href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://github.com/cheef30" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="#i-gh"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="fab" data-fab>
+    <ul class="fab__menu" id="fab-menu" data-fab-menu>
+      <li><a class="fab__item fab__item--wa" href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" data-i18n-attr="href:wa.href"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a></li>
+      <li><a class="fab__item fab__item--viber" href="viber://chat?number=%2B381645580188"><svg aria-hidden="true"><use href="#i-viber"/></svg><span>Viber</span></a></li>
+      <li><a class="fab__item fab__item--ig" href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+      <li><a class="fab__item fab__item--mail" href="#upit"><svg aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="fab.form">Pošaljite upit</span></a></li>
+    </ul>
+    <button class="fab__btn" type="button" aria-expanded="false" aria-controls="fab-menu" data-fab-toggle>
+      <span class="fab__label" data-i18n="fab.label">Pišite mi</span>
+      <span class="fab__icon" aria-hidden="true"><svg class="fab__chat"><use href="#i-chat"/></svg><i class="fab__x"></i></span>
+    </button>
+  </div>
+
+  <div class="cursor-label" data-cursor-label aria-hidden="true">Otvori sajt</div>
+
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
