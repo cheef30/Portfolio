@@ -15,7 +15,7 @@
   ],
   "rewrites": [
     {
-      "source": "/(radovi|usluge|kako-radim|o-meni|kontakt)",
+      "source": "/(radovi|usluge|kako-radim|o-meni|pitanja|kontakt)",
       "destination": "/"
     }
   ],

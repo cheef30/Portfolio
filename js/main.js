@@ -26,7 +26,7 @@
      Prevodi (srpski je u HTML-u, engleski je ovde)
      ------------------------------------------------------------------------ */
   const EN = {
-    'meta.title': 'Stefan Stević, web developer | Websites and web apps',
+    'meta.title': 'Web design and development in Belgrade, Serbia | Stefan Stević',
     skip: 'Skip to content',
     'nav.brandLabel': 'Stefan Stević, back to top',
     'nav.label': 'Main navigation',
@@ -35,13 +35,14 @@
     'nav.process': 'Process',
     'nav.about': 'About',
     'nav.contact': 'Contact',
+    'nav.faq': 'Questions',
     'nav.cta': 'Get in touch',
     'nav.menu': 'Menu',
     'lang.label': 'Language',
 
-    'hero.h1': 'Stefan Stević, web developer based in Obrenovac, Serbia',
+    'hero.h1': 'Stefan Stević, websites and web apps, Obrenovac and Belgrade, Serbia',
     'hero.alt': 'Stefan Stević in a blue blazer',
-    'hero.lede': 'I build websites and web apps for businesses. They load fast on a phone, say clearly what you do and make it easy for people to call you.',
+    'hero.lede': 'I build websites and web apps for businesses in Obrenovac, Belgrade and beyond. They load fast on a phone, say clearly what you do and make it easy for people to call you.',
     'hero.cta': 'Get a quote',
     'quick.label': 'Quick contact',
     'quick.wa': 'WhatsApp, +381 64 558 0188',
@@ -138,8 +139,8 @@
     'voices.q2': 'What we like most is that we add new departures and prices ourselves and don’t wait on anyone. And the site finally opens properly on a phone.',
     'voices.q3': 'We explained what we wanted in one call and that was it, no back and forth. The site is exactly what we had in mind, in both Serbian and English.',
 
-    'services.title': 'What I can do for you',
-    'services.sub': 'Before I start, we agree on the price and the timeline, so you know where you stand.',
+    'services.title': 'Websites and web apps',
+    'services.sub': 'From a simple business site to an app with bookings. Before I start, we agree on the price and the timeline, so you know where you stand.',
     'svc.ask': 'Ask about this service',
     's1.title': 'Business website',
     's1.sum': 'For businesses that need a site people find them through and call from.',
@@ -205,6 +206,21 @@
     'about.alt2': 'Stefan Stević at an international esports congress',
     'about.cap2': 'At an international esports congress in Malaysia, 2025.',
 
+    'faq.title': 'Questions',
+    'faq.sub': 'If your question isn’t here, message me on Viber or WhatsApp.',
+    'faq.q1': 'How much does a website cost?',
+    'faq.a1': 'It depends on how many pages and features you need. A simple business site costs far less than a web app with bookings and an admin panel. After a short call you get an exact price, and it doesn’t change unless we change the plan.',
+    'faq.q2': 'How long does it take?',
+    'faq.a2': 'A business site is usually ready two to four weeks after I get the copy and photos. Bigger web apps take longer, and you know the timeline before I start.',
+    'faq.q3': 'Do you only work with businesses in Obrenovac?',
+    'faq.a3': 'No. I mostly work with businesses in Obrenovac and Belgrade, where we can also meet in person, but I work with people from all over Serbia and abroad by phone and video call.',
+    'faq.q4': 'Will I be able to edit the site myself?',
+    'faq.a4': 'If you need to, you get an admin panel where you change prices, offers or dates yourself, like the Na Izlet agency does. If you’d rather not deal with it, send me a message and I’ll make the change.',
+    'faq.q5': 'Do you help with the domain, hosting and Google?',
+    'faq.a5': 'Yes. I help you pick and buy a domain, put the site on fast hosting, connect it to Google Search Console and set up your Google Business Profile, so people find you more easily in search and on the map.',
+    'faq.q6': 'I already have a website. Can you fix it?',
+    'faq.a6': 'Yes. Sometimes it’s enough to speed it up and fix what visitors see first, and sometimes a new site makes more sense, like it did for the Na Izlet agency. I’ll take a look and tell you honestly what’s worth doing.',
+
     'contact.title': 'Tell me what you need.',
     'contact.intro': 'Tell me briefly what your business does and what you need. I’ll get back to you with a proposal, a ballpark price and a timeline.',
     'contact.copy': 'Copy address',
@@ -222,7 +238,7 @@
     'form.msgPh': 'E.g. we install air conditioners and need a site people will call us from.',
     'form.send': 'Send message',
 
-    'footer.role': 'Web developer, Obrenovac',
+    'footer.role': 'Web development, Obrenovac and Belgrade',
     'footer.time': 'Local time in Obrenovac',
     'footer.top': 'Back to top',
     'footer.social': 'Social and contact',
@@ -370,7 +386,7 @@
   // Clean addresses: stefanstevic.rs/radovi instead of /#radovi or /index.html.
   // On Vercel every route below is rewritten to index.html (vercel.json).
   // On github.io (no rewrites) the address only loses the #hash.
-  const ROUTES = { radovi: 'radovi', usluge: 'usluge', 'kako-radim': 'proces', 'o-meni': 'o-meni', kontakt: 'kontakt' };
+  const ROUTES = { radovi: 'radovi', usluge: 'usluge', 'kako-radim': 'proces', 'o-meni': 'o-meni', pitanja: 'pitanja', kontakt: 'kontakt' };
   const ROUTE_OF = {};
   Object.keys(ROUTES).forEach((slug) => { ROUTE_OF[ROUTES[slug]] = slug; });
   const pathRouting = !/github\.io$/.test(location.hostname);

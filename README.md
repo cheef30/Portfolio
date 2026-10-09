@@ -33,6 +33,16 @@ Klik u meniju menja adresu u `stefanstevic.rs/radovi`, `/usluge`, `/kako-radim`,
 direktno na toj sekciji. To radi preko `rewrites` u `vercel.json`, pa radi samo na Vercelu.
 `/index.html` se automatski preusmerava na `/`.
 
+## SEO
+
+- Naslov stranice: "Izrada sajtova Obrenovac i Beograd | Stefan Stević" (do 60 znakova),
+  opis do 160 znakova. Oba su u `<head>` u `index.html`.
+- Strukturirani podaci (JSON-LD) u `<head>`: WebSite, Person, ProfessionalService
+  (usluge, Obrenovac, Beograd, Srbija) i FAQPage. Kad menjaš pitanja u sekciji
+  "Česta pitanja", promeni ih i u JSON-LD-u, tekst mora da bude isti.
+- Proveri posle svake veće izmene: https://search.google.com/test/rich-results
+  i https://validator.schema.org
+
 ## Utisci klijenata
 
 Sekcija "Šta kažu klijenti" (id `utisci`) ima tri utiska koje su klijenti odobrili.
