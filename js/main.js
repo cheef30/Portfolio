@@ -1088,6 +1088,26 @@
   });
 
   /* ------------------------------------------------------------------------
+     FAQ accordion (one open at a time)
+     ------------------------------------------------------------------------ */
+  const faqItems = $$('[data-faq]');
+  faqItems.forEach((item) => {
+    const btn = $('.faq__q', item);
+    btn.addEventListener('click', () => {
+      const open = !item.classList.contains('is-open');
+      faqItems.forEach((other) => {
+        const on = other === item ? open : false;
+        other.classList.toggle('is-open', on);
+        $('.faq__q', other).setAttribute('aria-expanded', String(on));
+      });
+      setTimeout(() => {
+        if (lenis && typeof lenis.resize === 'function') lenis.resize();
+        if (hasGSAP) ST.refresh();
+      }, 600);
+    });
+  });
+
+  /* ------------------------------------------------------------------------
      Cursor label over live screens + archive preview (mouse only)
      ------------------------------------------------------------------------ */
   if (finePointer && !reduceMotion) {
