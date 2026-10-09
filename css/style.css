@@ -1702,6 +1702,8 @@ a.shot:hover img {
   font: inherit;
 }
 .faq__q {
+  -webkit-appearance: none;
+  appearance: none;
   display: grid;
   grid-template-columns: 30px minmax(0, 1fr) 40px;
   align-items: center;

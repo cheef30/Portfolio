@@ -33,6 +33,11 @@ Klik u meniju menja adresu u `stefanstevic.rs/radovi`, `/usluge`, `/kako-radim`,
 direktno na toj sekciji. To radi preko `rewrites` u `vercel.json`, pa radi samo na Vercelu.
 `/index.html` se automatski preusmerava na `/`.
 
+## Posle izmene CSS-a ili JS-a
+
+Pokreni `python3 tools/bump-version.py`. Skripta menja `?v=...` na `style.css` i `main.js`
+u `index.html`, pa telefoni i browseri odmah učitaju novu verziju umesto stare iz keša.
+
 ## SEO
 
 - Naslov stranice: "Izrada sajtova Obrenovac i Beograd | Stefan Stević" (do 60 znakova),
