@@ -1,4 +1,4 @@
-# Stefan Stević — portfolio
+# Stefan Stević, portfolio
 
 Statički sajt: HTML, CSS i JavaScript, bez build koraka. Sve biblioteke i fontovi
 su u projektu (nema CDN-a ni Google Fonts linka), pa sajt radi brzo i bez spoljnih zavisnosti.
@@ -22,15 +22,22 @@ pa otvori `http://localhost:3000` (odnosno `:8000`). U VS Code-u radi i Live Ser
 2. Na vercel.com → **Add New Project** → izaberi repo → **Deploy** (framework: Other, bez build komande).
 3. `vercel.json` već podešava keširanje fontova, slika i skripti.
 
-Kad povežeš domen, u `<head>` dodaj `<link rel="canonical" href="https://tvojdomen.rs/">`
-i u `og:image` upiši pun URL (`https://tvojdomen.rs/og-image.jpg`) da bi se slika
-pojavila kad link podeliš na Vajberu, Fejsbuku i LinkedInu.
+Slika za deljenje (`og-image.jpg`) trenutno ide sa `https://cheef30.github.io/Portfolio/`.
+Kad povežeš svoj domen, u `index.html` zameni tu adresu novim domenom (u `og:url`,
+`og:image` i `twitter:image`) i dodaj `<link rel="canonical" href="https://tvojdomen.rs/">`.
+Bez toga se slika neće pojaviti kad link podeliš na Vajberu, Fejsbuku i LinkedInu.
+
+## Logo
+
+Logo je znak `<` iznad znaka `>`, tako da zajedno čine slovo S. Nalazi se u `index.html`
+kao simbol `#i-logo` (gornji deo prati boju teksta, donji je žut na tamnoj podlozi).
+Favicon je `favicon.svg`, a ikonice za telefon su `apple-touch-icon.png` i `icon-*.png`.
 
 ## Kontakt forma
 
 Forma šalje poruke preko FormSubmit-a na `stefanstevicoz30@gmail.com`.
-**Prvi put kad neko pošalje poruku, FormSubmit ti šalje mejl za aktivaciju** —
-klikni na link u tom mejlu i od tada poruke stižu direktno. Dok forma nije aktivirana,
+**Prvi put kad neko pošalje poruku, FormSubmit ti šalje mejl za aktivaciju**.
+Klikni na link u tom mejlu i od tada poruke stižu direktno. Dok forma nije aktivirana,
 posetilac dobija poruku da ti piše direktno na mejl.
 
 Da promeniš adresu: zameni `stefanstevicoz30@gmail.com` u `index.html` i u

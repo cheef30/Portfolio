@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Stefan Stević — portfolio
+   Stefan Stević, portfolio
    Vanilla JS. GSAP + ScrollTrigger i Lenis se učitavaju lokalno iz /vendor.
    Sve radi i bez njih (i bez animacija ako je uključen "reduce motion").
    ========================================================================== */
@@ -26,7 +26,7 @@
      Prevodi (srpski je u HTML-u, engleski je ovde)
      ------------------------------------------------------------------------ */
   const EN = {
-    'meta.title': 'Stefan Stević — web developer | Websites and web apps for businesses',
+    'meta.title': 'Stefan Stević, web developer | Websites and web apps',
     skip: 'Skip to content',
     'nav.brandLabel': 'Stefan Stević, back to top',
     'nav.label': 'Main navigation',
@@ -41,7 +41,7 @@
 
     'hero.h1': 'Stefan Stević, web developer based in Obrenovac, Serbia',
     'hero.alt': 'Stefan Stević in a blue blazer',
-    'hero.lede': 'Web developer based in Obrenovac, Serbia. I build websites and web apps for businesses that want more enquiries, calls and bookings.',
+    'hero.lede': 'I build websites and web apps for businesses. They load fast on a phone, say clearly what you do and make it easy for people to call you.',
     'hero.cta': 'Get a quote',
     'quick.label': 'Quick contact',
     'quick.wa': 'WhatsApp, +381 64 558 0188',
@@ -51,13 +51,13 @@
     'hero.status': 'Taking on new projects',
     'hero.where': 'Obrenovac and Belgrade, in person or remote',
 
-    'intro.title': 'A website shouldn’t just look good. <mark class="hl" data-hl>It should bring in work.</mark>',
-    'intro.p1': 'For most businesses, the website is where a client meets them first. So I focus on what a visitor sees in the first few seconds: that they understand what you offer right away, that the page opens fast on a phone, and that a call or an enquiry is one tap away.',
-    'intro.p2': 'The rest is craft: clean code, a solid base for Google search from day one, and a site that’s easy to maintain.',
+    'intro.title': 'I build websites that <mark class="hl" data-hl>get people to call you.</mark>',
+    'intro.p1': 'When someone needs a plumber, a travel agency or a restaurant, they open the website on their phone first. If they can’t tell what you do or find your number within a few seconds, they go to a competitor. So what matters most to me is that the site loads fast, reads clearly and always has a call button close by.',
+    'intro.p2': 'On top of that I write tidy code, set up the basics for Google from day one and build sites you can easily change later.',
     'intro.clients': 'I’ve built sites for',
 
     'work.title': 'Selected work',
-    'work.sub': 'Five projects, five different problems. Click any screen to open the live site.',
+    'work.sub': 'Each of these sites solved a different problem. Click a screen to open the live site.',
     'meta.year': 'Year',
     'meta.role': 'Role',
     'meta.stack': 'Technologies',
@@ -99,7 +99,7 @@
 
     'toma.kind': 'Homemade fruit rakija from Tomaševac',
     'toma.role': 'Concept, design and development',
-    'toma.text': 'A Cyrillic landing page for a homemade rakija. The video doesn’t play, it scrolls frame by frame: 121 frames, from bottle to sip, move exactly as fast as the visitor scrolls, and the colour of the whole page follows the frame in real time.',
+    'toma.text': 'A Cyrillic landing page for a homemade rakija. Instead of a regular video, the frames change as you scroll. There are 121 of them, from the bottle to the first sip, and the background colour changes along with each frame.',
     'toma.f1': '121 frames pulled from video, with a lighter sequence for phones',
     'toma.f2': 'Seven flavours, with details copied from the labels',
     'toma.f3': 'Orders by phone and Viber',
@@ -111,7 +111,7 @@
 
     'pro.kind': 'Air conditioning installation and service',
     'pro.role': 'Website redesign, in progress',
-    'pro.text': 'A local business whose site needs to do one thing: show visitors what the company does within seconds and get them to call. The redesign puts the phone number, WhatsApp and Viber on every screen, with services and photos from real jobs right below.',
+    'pro.text': 'An Obrenovac company that installs and services air conditioners. People usually look them up when their AC dies in the middle of summer, so the site has to show the number straight away. The redesign puts call, WhatsApp and Viber on every screen, with services and photos from real jobs right below.',
     'pro.f1': 'Call, WhatsApp and Viber in one tap',
     'pro.f2': 'Gallery of real jobs',
     'pro.f3': 'Separate pages for services, work and contact',
@@ -133,11 +133,11 @@
     'tag.concept': 'Concept',
 
     'services.title': 'What I can do for you',
-    'services.sub': 'Every project starts with a conversation, and you know the price and the timeline before I begin.',
+    'services.sub': 'Before I start, we agree on the price and the timeline, so you know where you stand.',
     'svc.ask': 'Ask about this service',
     's1.title': 'Business website',
-    's1.sum': 'For businesses that want clients to find them, understand them and call.',
-    's1.body': 'A presentation site or landing page designed for your business, not lifted from a template.',
+    's1.sum': 'For businesses that need a site people find them through and call from.',
+    's1.body': 'A presentation site or a landing page. I design every one from scratch and don’t use ready-made templates.',
     's1.l1': 'Design made for your business',
     's1.l2': 'Built for phones and tablets',
     's1.l3': 'Call, WhatsApp and Viber buttons',
@@ -153,41 +153,41 @@
     's2.l4': 'PDF documents and email notifications',
     's2.l5': 'Training on how to use it',
     's3.title': '3D and motion',
-    's3.sum': 'For products and spaces people need to see, not just read about.',
-    's3.body': '3D configurators, scroll-driven animation and interactive views that stay with people, like the Modus Gradnja building or the rakija that pours as you scroll.',
+    's3.sum': 'When a product or a space needs to be seen from every angle.',
+    's3.body': '3D configurators, scroll-driven animation and interactive views. Examples are the Modus Gradnja building and the rakija that pours as you scroll.',
     's3.l1': '3D models in Three.js',
     's3.l2': 'Animation with GSAP',
     's3.l3': 'Optimised to run smoothly on phones',
     's4.title': 'Maintenance',
-    's4.sum': 'You send a message, I make the change.',
+    's4.sum': 'You send me a message and I make the change.',
     's4.body': 'Monthly maintenance for sites I built or take over from others: content and price updates, fixes and regular checks.',
     's4.l1': 'Text, image and price updates',
     's4.l2': 'Fixes and technical support',
     's4.l3': 'Speed and health checks',
 
     'process.title': 'How I work',
-    'process.sub': 'Four steps, no surprises. You always know what comes next and how long it takes.',
-    'process.ctaText': 'The first step is a short call, with no obligation. After it, you know the price and the timeline.',
+    'process.sub': 'This is what working together looks like, from the first call to the site on your domain.',
+    'process.ctaText': 'The call is free and doesn’t commit you to anything.',
     'process.cta': 'Book a call',
     'p1.time': 'Free',
     'p2.time': 'About a week',
     'p3.time': '1 to 3 weeks',
     'p4.time': 'One day',
     'p1.title': 'Conversation',
-    'p1.text': 'A short call or a meeting in Obrenovac or Belgrade. We talk about your business, your clients and what the site needs to achieve. Afterwards you get a proposal with a price and a timeline.',
+    'p1.text': 'A short call or a coffee in Obrenovac or Belgrade. You tell me what your business does and what you expect from the site, and afterwards I send you a proposal with a price and a timeline.',
     'p2.title': 'Design',
-    'p2.text': 'I put together the structure and look of the site and send it to you as a working version in the browser. You comment, and we agree on changes before the build starts.',
+    'p2.text': 'I put together the layout and the look and send you a link to check it in your browser. You tell me what you don’t like, I fix it, and only then do I start building.',
     'p3.title': 'Build',
-    'p3.text': 'I build the site, add the copy and photos, and test it on phones, tablets and desktops.',
+    'p3.text': 'I code the site, add your copy and photos and test it on a phone, a tablet and a desktop.',
     'p4.title': 'Launch',
-    'p4.text': 'I connect the domain, submit the site to Google and hand over access. After launch I stay around for changes and maintenance.',
+    'p4.text': 'I connect the domain, submit the site to Google and give you all the logins. If something needs changing later, I’m around.',
 
     'about.alt1': 'Stefan Stević at the Phygital Sports Summit in Abu Dhabi',
     'about.cap1': 'Phygital Sports Summit, Abu Dhabi, December 2025.',
     'about.title': 'Hi, I’m Stefan.',
     'about.p1': 'I’m a web developer from Obrenovac, Serbia. Before focusing on building websites, I worked at the marketing agency Hero Advertising and at the SESE esports federation, where I took part in international events and congresses, from Abu Dhabi to Malaysia.',
-    'about.p2': 'Marketing taught me to treat a website as a sales tool: what a visitor has to see, understand and click. So before the first line of code, I ask who the site needs to convince, and of what.',
-    'about.p3': 'Today I build websites and web apps for businesses, from 3D apartment viewers to booking systems. You work with me directly, with no middlemen: the person you talk to is the person writing the code.',
+    'about.p2': 'Marketing taught me that a website exists to sell. So before I write the first line of code, I ask who your customers are and what would convince them to call you.',
+    'about.p3': 'Now I build websites and web apps for businesses, from 3D apartment viewers to booking systems. I do everything myself, so you deal with me directly.',
     'about.k1': 'Location',
     'about.v1': 'Obrenovac, Belgrade',
     'about.k2': 'Languages',
@@ -200,7 +200,7 @@
     'about.cap2': 'At an international esports congress in Malaysia, 2025.',
 
     'contact.title': 'Tell me what you need.',
-    'contact.intro': 'Describe your business and what the site should do. I’ll get back to you with a proposal, a ballpark price and a timeline.',
+    'contact.intro': 'Tell me briefly what your business does and what you need. I’ll get back to you with a proposal, a ballpark price and a timeline.',
     'contact.copy': 'Copy address',
     'contact.fast': 'I reply fastest on WhatsApp and Viber, usually the same day.',
     'contact.mailLabel': 'Or by email:',

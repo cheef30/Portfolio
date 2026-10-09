@@ -512,7 +512,22 @@ html.lenis body {
   transform: translateY(-140%);
   box-shadow: none;
 }
+.logo {
+  display: block;
+  flex: none;
+  width: 20px;
+  height: 24px;
+  overflow: visible;
+}
+.nav.is-solid,
+.nav.menu-open,
+.footer {
+  --logo-accent: var(--sun);
+}
 .nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 720;
   font-stretch: 88%;
   font-size: 1.0625rem;
@@ -2260,6 +2275,11 @@ a.shot:hover img {
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto;
   gap: 32px;
   align-items: start;
+}
+.footer__logo {
+  width: 30px;
+  height: 36px;
+  margin-bottom: 16px;
 }
 .footer__brand {
   color: var(--paper);

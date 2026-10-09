@@ -1,10 +1,10 @@
 {
-  "name": "Stefan Stević — web developer",
+  "name": "Stefan Stević, web developer",
   "short_name": "Stefan Stević",
   "description": "Sajtovi i web aplikacije za firme.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#fec834",
+  "background_color": "#121628",
   "theme_color": "#fec834",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
