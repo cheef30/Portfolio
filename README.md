@@ -22,10 +22,16 @@ pa otvori `http://localhost:3000` (odnosno `:8000`). U VS Code-u radi i Live Ser
 2. Na vercel.com → **Add New Project** → izaberi repo → **Deploy** (framework: Other, bez build komande).
 3. `vercel.json` već podešava keširanje fontova, slika i skripti.
 
-Slika za deljenje (`og-image.jpg`) trenutno ide sa `https://cheef30.github.io/Portfolio/`.
-Kad povežeš svoj domen, u `index.html` zameni tu adresu novim domenom (u `og:url`,
-`og:image` i `twitter:image`) i dodaj `<link rel="canonical" href="https://tvojdomen.rs/">`.
-Bez toga se slika neće pojaviti kad link podeliš na Vajberu, Fejsbuku i LinkedInu.
+Sajt je podešen za domen `https://stefanstevic.rs/` (canonical, slika za deljenje,
+`sitemap.xml`, `robots.txt`). Ako se domen promeni, zameni tu adresu na tim mestima.
+
+### Čiste adrese
+
+Adresa u browseru ostaje čista: `stefanstevic.rs`, bez `index.html` i bez `#`.
+Klik u meniju menja adresu u `stefanstevic.rs/radovi`, `/usluge`, `/kako-radim`,
+`/o-meni` ili `/kontakt`, a te adrese mogu da se šalju ljudima i otvaraju sajt
+direktno na toj sekciji. To radi preko `rewrites` u `vercel.json`, pa radi samo na Vercelu.
+`/index.html` se automatski preusmerava na `/`.
 
 ## Utisci klijenata
 

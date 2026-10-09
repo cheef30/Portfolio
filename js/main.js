@@ -367,6 +367,46 @@
     if (e.matches && menuOpen) setMenu(false);
   });
 
+  // Clean addresses: stefanstevic.rs/radovi instead of /#radovi or /index.html.
+  // On Vercel every route below is rewritten to index.html (vercel.json).
+  // On github.io (no rewrites) the address only loses the #hash.
+  const ROUTES = { radovi: 'radovi', usluge: 'usluge', 'kako-radim': 'proces', 'o-meni': 'o-meni', kontakt: 'kontakt' };
+  const ROUTE_OF = {};
+  Object.keys(ROUTES).forEach((slug) => { ROUTE_OF[ROUTES[slug]] = slug; });
+  const pathRouting = !/github\.io$/.test(location.hostname);
+  const slugNow = location.pathname.replace(/^.*\//, '').replace(/\.html$/, '');
+  const BASE = location.pathname.replace(/[^/]*$/, '');
+
+  function setCleanUrl(id) {
+    if (!history.replaceState) return;
+    const slug = pathRouting ? ROUTE_OF[id] : null;
+    history.replaceState(null, '', BASE + (slug || '') + location.search);
+  }
+
+  // arriving on /radovi, /kontakt ... (or an old #hash link): jump to that section
+  (function openDeepLink() {
+    const id = ROUTES[slugNow] || (location.hash ? decodeURIComponent(location.hash.slice(1)) : '');
+    const target = id && document.getElementById(id);
+    if (!target) {
+      if (slugNow === 'index') setCleanUrl('top');
+      return;
+    }
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    setCleanUrl(id);
+    const jump = () => {
+      if (lenis) {
+        if (typeof lenis.resize === 'function') lenis.resize();
+        lenis.scrollTo(target, { immediate: true, force: true });
+      } else {
+        target.scrollIntoView();
+      }
+      if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+      setCleanUrl(id);
+    };
+    if (document.readyState === 'complete') setTimeout(jump, 300);
+    else window.addEventListener('load', () => setTimeout(jump, 300), { once: true });
+  })();
+
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
@@ -381,7 +421,7 @@
         if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
         setTimeout(() => target.focus({ preventScroll: true }), reduceMotion ? 0 : 900);
       }
-      if (history.replaceState) history.replaceState(null, '', id === 'top' ? location.pathname : '#' + id);
+      setCleanUrl(id);
     };
     if (menuOpen) {
       setMenu(false);
