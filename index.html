@@ -35,7 +35,7 @@
   <link rel="preload" href="fonts/archivo-base.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/archivo-sr.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="img/stefan-hero-600.avif 600w, img/stefan-hero-720.avif 720w, img/stefan-hero-890.avif 890w" imagesizes="(min-width: 1024px) 56vw, 120vw" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=ac2e0a9a">
+  <link rel="stylesheet" href="css/style.css?v=794c9e78">
 
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
@@ -872,6 +872,7 @@
         <header class="faq__head">
           <h2 class="section-title" data-i18n="faq.title">Česta pitanja</h2>
           <p class="faq__sub" data-i18n="faq.sub">Ako ovde nema odgovora, pišite mi na Viber ili WhatsApp.</p>
+          <button class="faq__ask" type="button" data-chat-open hidden><span class="faq__ask-mark" aria-hidden="true"><svg class="logo"><use href="#i-logo"/></svg></span><span><strong data-i18n="faq.askTitle">Pitajte mog AI asistenta</strong><span data-i18n="faq.askSub">Zna sve o mom radu i odgovara odmah.</span></span></button>
         </header>
         <div class="faq__list">
           <div class="faq__item" data-faq>
@@ -1026,6 +1027,7 @@
 
   <div class="fab" data-fab>
     <ul class="fab__menu" id="fab-menu" data-fab-menu>
+      <li hidden><button class="fab__item fab__item--ai" type="button" data-chat-open hidden><svg aria-hidden="true"><use href="#i-logo"/></svg><span data-i18n="fab.ai">Pitajte AI asistenta</span></button></li>
       <li><a class="fab__item fab__item--wa" href="https://wa.me/381645580188?text=Zdravo%20Stefane%2C%20pi%C5%A1em%20sa%20va%C5%A1eg%20sajta.%20Zanima%20me%20izrada%20sajta." target="_blank" rel="noopener" data-i18n-attr="href:wa.href"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a></li>
       <li><a class="fab__item fab__item--viber" href="viber://chat?number=%2B381645580188"><svg aria-hidden="true"><use href="#i-viber"/></svg><span>Viber</span></a></li>
       <li><a class="fab__item fab__item--ig" href="https://www.instagram.com/stevke30/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
@@ -1042,6 +1044,7 @@
   <script src="vendor/gsap.min.js" defer></script>
   <script src="vendor/ScrollTrigger.min.js" defer></script>
   <script src="vendor/lenis.min.js" defer></script>
-  <script src="js/main.js?v=98048092" defer></script>
+  <script src="js/chat.js?v=6cf790f2" defer></script>
+  <script src="js/main.js?v=876d2d40" defer></script>
 </body>
 </html>

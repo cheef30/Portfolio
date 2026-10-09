@@ -208,6 +208,8 @@
 
     'faq.title': 'Questions',
     'faq.sub': 'If your question isn’t here, message me on Viber or WhatsApp.',
+    'faq.askTitle': 'Ask my AI assistant',
+    'faq.askSub': 'It knows my work and replies instantly.',
     'faq.q1': 'How much does a website cost?',
     'faq.a1': 'It depends on how many pages and features you need. A simple business site costs far less than a web app with bookings and an admin panel. After a short call you get an exact price, and it doesn’t change unless we change the plan.',
     'faq.q2': 'How long does it take?',
@@ -244,6 +246,7 @@
     'footer.social': 'Social and contact',
     'fab.label': 'Message me',
     'fab.form': 'Send an enquiry',
+    'fab.ai': 'Ask my AI assistant',
   };
 
   const STR = {
@@ -1372,7 +1375,7 @@
       if (!show && fabOpen) setFab(false);
     };
     fabBtn.addEventListener('click', () => setFab(!fabOpen));
-    $$('a', fab).forEach((a) => a.addEventListener('click', () => setFab(false)));
+    $$('a, button[data-chat-open]', fab).forEach((a) => a.addEventListener('click', () => setFab(false)));
     document.addEventListener('click', (e) => {
       if (fabOpen && !fab.contains(e.target)) setFab(false);
     });

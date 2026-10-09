@@ -38,6 +38,22 @@ direktno na toj sekciji. To radi preko `rewrites` u `vercel.json`, pa radi samo 
 Pokreni `python3 tools/bump-version.py`. Skripta menja `?v=...` na `style.css` i `main.js`
 u `index.html`, pa telefoni i browseri odmah učitaju novu verziju umesto stare iz keša.
 
+## AI asistent
+
+Chat na sajtu ("Pitajte mog AI asistenta") odgovara na pitanja o tebi preko Google Gemini-ja.
+
+- `api/chat.js` je Vercel funkcija koja razgovara sa Gemini-jem. Ključ je samo na serveru.
+- `lib/assistant-prompt.js` je sve što asistent zna o tebi. **Kad promeniš nešto na sajtu
+  (projekte, usluge, rokove), promeni i ovde.**
+- `js/chat.js` je chat prozor. Svaki razgovor ti stiže na mejl preko FormSubmit-a.
+- Radi samo na Vercelu. Na GitHub Pages dugmad za asistenta su sakrivena.
+
+Podešavanje na Vercelu (Settings → Environment Variables):
+- `GEMINI_API_KEY`: ključ sa https://aistudio.google.com/apikey (obavezno)
+- `GEMINI_MODEL`: nije obavezno, podrazumevano je `gemini-flash-latest`
+
+Posle dodavanja promenljive uradi **Redeploy** da bi je funkcija videla.
+
 ## SEO
 
 - Naslov stranice: "Izrada sajtova Obrenovac i Beograd | Stefan Stević" (do 60 znakova),
