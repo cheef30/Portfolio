@@ -18,7 +18,7 @@ pa otvori `http://localhost:3000` (odnosno `:8000`). U VS Code-u radi i Live Ser
 
 ## Objavljivanje na Vercel
 
-1. Repo je već na GitHubu (`cheef30/portfolio`).
+1. Repo je već na GitHubu (`cheef30/Portfolio`).
 2. Na vercel.com → **Add New Project** → izaberi repo → **Deploy** (framework: Other, bez build komande).
 3. `vercel.json` već podešava keširanje fontova, slika i skripti.
 
