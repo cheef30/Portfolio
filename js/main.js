@@ -134,9 +134,9 @@
 
     'voices.title': 'What clients say',
     'voices.sub': 'People I’ve worked with, in their own words.',
-    'voices.q1': 'Buyers now browse the apartments in 3D on their own and call us once they’ve already picked one. When we change a price or sell an apartment, we tell Stefan and it’s on the site the same day.',
-    'voices.q2': 'We add departures and prices ourselves now, without waiting on a developer. The site opens much faster on phones than the old one, and travellers pick their own bus seat.',
-    'voices.q3': 'Stefan quickly understood what we needed and didn’t overcomplicate it. The site works in Serbian and English, and adding new offers is easy.',
+    'voices.q1': 'People call us now once they’ve already picked an apartment, so we don’t have to send PDFs to everyone anymore. And when we sell one, we just tell Stefan and it’s sorted the same day.',
+    'voices.q2': 'What we like most is that we add new departures and prices ourselves and don’t wait on anyone. And the site finally opens properly on a phone.',
+    'voices.q3': 'We explained what we wanted in one call and that was it, no back and forth. The site is exactly what we had in mind, in both Serbian and English.',
 
     'services.title': 'What I can do for you',
     'services.sub': 'Before I start, we agree on the price and the timeline, so you know where you stand.',

@@ -1638,11 +1638,9 @@ a.shot:hover img {
   border-top: 1px solid var(--line-light);
   font-size: 0.9375rem;
 }
-.voice__who strong {
-  font-weight: 700;
-}
 .voice__who a {
-  color: var(--slate);
+  font-weight: 700;
+  color: var(--ink);
   text-decoration: none;
 }
 .voice__who a:hover {

@@ -29,10 +29,9 @@ Bez toga se slika neće pojaviti kad link podeliš na Vajberu, Fejsbuku i Linked
 
 ## Utisci klijenata
 
-Sekcija "Šta kažu klijenti" je spremna u `index.html` (id `utisci`), ali je skrivena
-atributom `hidden` dok klijenti ne odobre tekst. Kad odobre: upiši pravo ime umesto
-`[Ime i prezime]`, po potrebi izmeni citat (srpski u `index.html`, engleski u
-`js/main.js` pod `voices.q1` do `voices.q3`) i obriši `hidden` iz `<section>`.
+Sekcija "Šta kažu klijenti" (id `utisci`) ima tri utiska koje su klijenti odobrili.
+Srpski tekst je u `index.html`, engleski u `js/main.js` pod `voices.q1` do `voices.q3`.
+Ako hoćeš i ime osobe, dodaj ga u `<figcaption class="voice__who">` ispred linka firme.
 
 ## Logo
 
