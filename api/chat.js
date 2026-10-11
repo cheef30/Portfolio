@@ -1,11 +1,16 @@
 // Vercel funkcija: prima poruke iz chata na sajtu i vraća odgovor od Gemini-ja.
 // Potrebne promenljive na Vercelu (Settings → Environment Variables):
 //   GEMINI_API_KEY   ključ sa https://aistudio.google.com/apikey  (obavezno)
-//   GEMINI_MODEL     npr. gemini-flash-latest                     (nije obavezno)
+//   GEMINI_MODEL     glavni model, npr. gemini-flash-latest       (nije obavezno)
+//   GEMINI_FALLBACK  rezervni model kad je glavni zauzet ili spor (nije obavezno)
 
 const { SYSTEM_PROMPT } = require('../lib/assistant-prompt');
 
-const MODEL = process.env.GEMINI_MODEL || 'gemini-flash-latest';
+const MODELS = [
+  process.env.GEMINI_MODEL || 'gemini-flash-latest',
+  process.env.GEMINI_FALLBACK || 'gemini-flash-lite-latest',
+];
+const ATTEMPT_MS = 12000; // po pokušaju; dva pokušaja staju u maxDuration iz vercel.json
 const MAX_TURNS = 24; // koliko poruka iz razgovora šaljemo modelu
 const MAX_USER_CHARS = 700;
 const PER_IP_PER_HOUR = 40; // zaštita od zloupotrebe (po instanci funkcije)
@@ -71,35 +76,42 @@ module.exports = async (req, res) => {
     ? '\n\nThe visitor is browsing the English version of the site. Reply in English unless they write in Serbian.'
     : '\n\nPosetilac gleda srpsku verziju sajta.';
 
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 25000);
-  try {
-    const r = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(MODEL)}:generateContent`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
-        body: JSON.stringify({
-          system_instruction: { parts: [{ text: SYSTEM_PROMPT + hint }] },
-          contents: messages,
-          generationConfig: { temperature: 0.5, maxOutputTokens: 2048 },
-        }),
-        signal: controller.signal,
+  const payload = JSON.stringify({
+    system_instruction: { parts: [{ text: SYSTEM_PROMPT + hint }] },
+    contents: messages,
+    generationConfig: { temperature: 0.5, maxOutputTokens: 2048 },
+  });
+
+  let lastStatus = 502;
+  for (const model of MODELS) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), ATTEMPT_MS);
+    try {
+      const r = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+          body: payload,
+          signal: controller.signal,
+        }
+      );
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) {
+        console.error('gemini error', model, r.status, JSON.stringify(data).slice(0, 300));
+        lastStatus = r.status;
+        continue; // zauzet, limit ili greška: probaj rezervni model
       }
-    );
-    const data = await r.json().catch(() => ({}));
-    if (!r.ok) {
-      console.error('gemini error', r.status, JSON.stringify(data).slice(0, 500));
-      return res.status(r.status === 429 ? 429 : 502).json({ error: r.status === 429 ? 'busy' : 'upstream' });
+      const parts = (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) || [];
+      const reply = parts.filter((p) => !p.thought).map((p) => p.text || '').join('').trim();
+      if (reply) return res.status(200).json({ reply });
+      console.error('gemini empty', model);
+    } catch (e) {
+      console.error('gemini timeout', model, e && e.message);
+      lastStatus = 504;
+    } finally {
+      clearTimeout(timer);
     }
-    const parts = (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) || [];
-    const reply = parts.filter((p) => !p.thought).map((p) => p.text || '').join('').trim();
-    if (!reply) return res.status(502).json({ error: 'empty' });
-    return res.status(200).json({ reply });
-  } catch (e) {
-    console.error('chat failed', e && e.message);
-    return res.status(504).json({ error: 'timeout' });
-  } finally {
-    clearTimeout(timer);
   }
+  return res.status(lastStatus === 429 ? 429 : 502).json({ error: lastStatus === 429 ? 'busy' : 'upstream' });
 };
