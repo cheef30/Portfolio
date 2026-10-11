@@ -9,8 +9,9 @@ const { SYSTEM_PROMPT } = require('../lib/assistant-prompt');
 const MODELS = [
   process.env.GEMINI_MODEL || 'gemini-flash-latest',
   process.env.GEMINI_FALLBACK || 'gemini-flash-lite-latest',
+  'gemini-3.5-flash-lite', // ako alias iznad ne postoji, Google odmah vrati 404 i ide se dalje
 ];
-const ATTEMPT_MS = 12000; // po pokušaju; dva pokušaja staju u maxDuration iz vercel.json
+const ATTEMPT_MS = 9000; // po pokušaju; dva pokušaja staju u maxDuration iz vercel.json
 const MAX_TURNS = 24; // koliko poruka iz razgovora šaljemo modelu
 const MAX_USER_CHARS = 700;
 const PER_IP_PER_HOUR = 40; // zaštita od zloupotrebe (po instanci funkcije)
