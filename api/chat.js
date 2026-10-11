@@ -1,15 +1,16 @@
 // Vercel funkcija: prima poruke iz chata na sajtu i vraća odgovor od Gemini-ja.
 // Potrebne promenljive na Vercelu (Settings → Environment Variables):
 //   GEMINI_API_KEY   ključ sa https://aistudio.google.com/apikey  (obavezno)
-//   GEMINI_MODEL     glavni model, npr. gemini-flash-latest       (nije obavezno)
+//   GEMINI_MODEL     glavni model, npr. gemini-flash-lite-latest  (nije obavezno)
 //   GEMINI_FALLBACK  rezervni model kad je glavni zauzet ili spor (nije obavezno)
 
 const { SYSTEM_PROMPT } = require('../lib/assistant-prompt');
 
 const MODELS = [
-  process.env.GEMINI_MODEL || 'gemini-flash-latest',
-  process.env.GEMINI_FALLBACK || 'gemini-flash-lite-latest',
+  // Flash-Lite odgovara za 1 do 3 sekunde, što je za chat bitnije od malo pametnijeg modela.
+  process.env.GEMINI_MODEL || 'gemini-flash-lite-latest',
   'gemini-3.5-flash-lite', // ako alias iznad ne postoji, Google odmah vrati 404 i ide se dalje
+  process.env.GEMINI_FALLBACK || 'gemini-flash-latest',
 ];
 const ATTEMPT_MS = 9000; // po pokušaju; dva pokušaja staju u maxDuration iz vercel.json
 const MAX_TURNS = 24; // koliko poruka iz razgovora šaljemo modelu
