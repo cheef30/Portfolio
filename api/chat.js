@@ -80,7 +80,7 @@ module.exports = async (req, res) => {
   const payload = JSON.stringify({
     system_instruction: { parts: [{ text: SYSTEM_PROMPT + hint }] },
     contents: messages,
-    generationConfig: { temperature: 0.5, maxOutputTokens: 2048 },
+    generationConfig: { temperature: 0.2, maxOutputTokens: 2048 },
   });
 
   let lastStatus = 502;
