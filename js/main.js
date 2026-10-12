@@ -23,235 +23,11 @@
   // telefon za WhatsApp, Viber i poziv: +381 64 558 0188
 
   /* ------------------------------------------------------------------------
-     Prevodi (srpski je u HTML-u, engleski je ovde)
+     Jezik: srpski je na /, engleski na /en (pravi ga tools/build.mjs).
+     Ovde su samo poruke koje pravi JavaScript.
      ------------------------------------------------------------------------ */
-  const EN = {
-    'meta.title': 'Web design and development in Belgrade, Serbia | Stefan Stević',
-    skip: 'Skip to content',
-    'nav.brandLabel': 'Stefan Stević, back to top',
-    'nav.label': 'Main navigation',
-    'nav.work': 'Work',
-    'nav.services': 'Services',
-    'nav.process': 'Process',
-    'nav.about': 'About',
-    'nav.contact': 'Contact',
-    'nav.faq': 'Questions',
-    'nav.cta': 'Get in touch',
-    'nav.menu': 'Menu',
-    'lang.label': 'Language',
-
-    'hero.h1': 'Stefan Stević, websites and web apps, Obrenovac and Belgrade, Serbia',
-    'hero.alt': 'Stefan Stević in a blue blazer',
-    'hero.lede': 'I build websites and web apps for businesses in Obrenovac, Belgrade and beyond. They load fast on a phone, say clearly what you do and make it easy for people to call you.',
-    'hero.cta': 'Get a quote',
-    'quick.label': 'Quick contact',
-    'quick.wa': 'WhatsApp, +381 64 558 0188',
-    'quick.viber': 'Viber, +381 64 558 0188',
-    'wa.href': 'https://wa.me/381645580188?text=Hi%20Stefan%2C%20I%20found%20you%20through%20your%20website.%20I%27d%20like%20to%20talk%20about%20a%20website.',
-    'hero.cta2': 'See the work',
-    'hero.status': 'Taking on new projects',
-    'hero.where': 'Obrenovac and Belgrade, in person or remote',
-
-    'intro.title': 'I build websites that <mark class="hl" data-hl>get people to call you.</mark>',
-    'intro.p1': 'When someone needs a plumber, a travel agency or a restaurant, they open the website on their phone first. If they can’t tell what you do or find your number within a few seconds, they go to a competitor. So what matters most to me is that the site loads fast, reads clearly and always has a call button close by.',
-    'intro.p2': 'On top of that I write tidy code, set up the basics for Google from day one and build sites you can easily change later.',
-    'intro.clients': 'I’ve built sites for',
-
-    'work.title': 'Selected work',
-    'work.sub': 'Each of these sites solved a different problem. Click a screen to open the live site.',
-    'meta.year': 'Year',
-    'meta.role': 'Role',
-    'meta.stack': 'Technologies',
-
-    'modus.kind': 'Residential property developer',
-    'modus.role': 'Design, development and maintenance',
-    'modus.text': 'The company sells apartments from its own developments and needed buyers to find their apartment on their own, without PDFs going back and forth. I built the site around a 3D model of the building: buyers rotate it, pick a floor and an apartment, and instantly see the layout, floor area and price.',
-    'modus.f1': '3D model generated in code with Three.js, no heavy 3D files',
-    'modus.f2': '2D floor plan synced with the 3D view, both ways',
-    'modus.f3': '70 apartments, each with its own page, sales sheet and enquiry form',
-    'modus.f4': 'Monthly maintenance: I keep prices and availability up to date',
-    'modus.alt1': 'Modus Gradnja home page',
-    'modus.alt2': 'Modus Gradnja on a phone',
-    'modus.alt3': '3D apartment configurator with a floor plan',
-    'modus.cap': 'Configurator: second floor selected, with a schematic floor plan and an apartment list with prices.',
-
-    'naizlet.kind': 'Travel agency, Belgrade',
-    'naizlet.role': 'Redesign and development',
-    'naizlet.text': 'The agency runs day trips and tours across Europe, and its old WordPress site was slow on phones and hard to keep up to date. The new site was built from scratch in Next.js, with an admin panel where the agency adds trips, dates and prices on its own.',
-    'naizlet.f1': 'Departure calendar and trip sign-ups',
-    'naizlet.f2': 'Booking system with a bus seat map',
-    'naizlet.f3': 'PDF documents, blog and destination pages',
-    'naizlet.f4': 'Structured data for Google, AVIF images, automatic sitemap',
-    'naizlet.alt1': 'Trip calendar on the Na Izlet website',
-    'naizlet.alt2': 'Na Izlet on a phone',
-    'naizlet.alt3': 'Trip page with price and next departure',
-    'naizlet.cap': 'Trip page: itinerary, price, next departure and sign-up in one place.',
-
-    'leto.kind': 'Travel agency specialising in Turkey',
-    'leto.role': 'Design and development',
-    'leto.text': 'The agency sells Turkey only, so the site has to surface offers and dates fast. The bilingual site has last-minute offers showing the days left until departure, destinations filtered by type of holiday, and a blog.',
-    'leto.f1': 'Serbian and English on one site',
-    'leto.f2': 'Offers that show how many days are left until departure',
-    'leto.f3': 'Lighthouse SEO score of 100 on mobile',
-    'leto.alt1': 'Destinations with filters on the Leto u Turskoj website',
-    'leto.alt2': 'Leto u Turskoj on a phone',
-    'leto.alt3': 'Leto u Turskoj home screen',
-    'leto.cap': 'Home screen: one message, one button, and a choice between flying or taking the bus.',
-
-    'toma.kind': 'Homemade fruit rakija from Tomaševac',
-    'toma.role': 'Concept, design and development',
-    'toma.text': 'A Cyrillic landing page for a homemade rakija. Instead of a regular video, the frames change as you scroll. There are 121 of them, from the bottle to the first sip, and the background colour changes along with each frame.',
-    'toma.f1': '121 frames pulled from video, with a lighter sequence for phones',
-    'toma.f2': 'Seven flavours, with details copied from the labels',
-    'toma.f3': 'Orders by phone and Viber',
-    'toma.link': 'View the site',
-    'toma.alt1': 'Frame 68 of 121: rakija being poured into a glass',
-    'toma.alt2': 'Tomaševačka on a phone',
-    'toma.alt3': 'Opening screen with the name in Cyrillic',
-    'toma.cap': 'Opening screen. The whole site is in Cyrillic, including navigation and buttons.',
-
-    'pro.kind': 'Air conditioning installation and service',
-    'pro.role': 'Website redesign, in progress',
-    'pro.text': 'An Obrenovac company that installs and services air conditioners. People usually look them up when their AC dies in the middle of summer, so the site has to show the number straight away. The redesign puts call, WhatsApp and Viber on every screen, with services and photos from real jobs right below.',
-    'pro.f1': 'Call, WhatsApp and Viber in one tap',
-    'pro.f2': 'Gallery of real jobs',
-    'pro.f3': 'Separate pages for services, work and contact',
-    'pro.link': 'View the redesign preview',
-    'pro.alt1': 'Home page of the PRO KLIMA redesign',
-    'pro.alt2': 'PRO KLIMA on a phone, with a call button',
-    'pro.alt3': 'Gallery of jobs with filters by type of work',
-    'pro.cap': 'Gallery from real jobs: 41 completed jobs, filterable by type of work.',
-
-    'archive.title': 'More work',
-    'archive.sub': 'Smaller projects, concepts and things I built for myself.',
-    'arch.misters': 'Bilingual site for an event venue in central Belgrade',
-    'arch.rotten': 'Photographer portfolio with an admin panel, the subject of my thesis',
-    'arch.auto': 'Proposed new site for a driving school in Obrenovac',
-    'arch.ember': 'Café website concept with a menu and table bookings',
-    'arch.sistem': 'Personal training tracker app that also works offline',
-    'tag.progress': 'In progress',
-    'tag.thesis': 'Thesis',
-    'tag.concept': 'Concept',
-
-    'voices.title': 'What clients say',
-    'voices.sub': 'People I’ve worked with, in their own words.',
-    'voices.q1': 'People call us now once they’ve already picked an apartment, so we don’t have to send PDFs to everyone anymore. And when we sell one, we just tell Stefan and it’s sorted the same day.',
-    'voices.q2': 'What we like most is that we add new departures and prices ourselves and don’t wait on anyone. And the site finally opens properly on a phone.',
-    'voices.q3': 'We explained what we wanted in one call and that was it, no back and forth. The site is exactly what we had in mind, in both Serbian and English.',
-
-    'services.title': 'Websites and web apps',
-    'services.sub': 'From a simple business site to an app with bookings. Before I start, we agree on the price and the timeline, so you know where you stand.',
-    'svc.ask': 'Ask about this service',
-    's1.title': 'Business website',
-    's1.sum': 'For businesses that need a site people find them through and call from.',
-    's1.body': 'A presentation site or a landing page. I design every one from scratch and don’t use ready-made templates.',
-    's1.l1': 'Design made for your business',
-    's1.l2': 'Built for phones and tablets',
-    's1.l3': 'Call, WhatsApp and Viber buttons',
-    's1.l4': 'Google Maps and a contact form',
-    's1.l5': 'A solid base for Google search',
-    's1.l6': 'Help with domain and hosting',
-    's2.title': 'Web application',
-    's2.sum': 'When your site needs to do part of the work for you.',
-    's2.body': 'Bookings, calendars, an admin panel for prices and offers, user accounts and a database. Like the Na Izlet agency, where trips and dates are added without a developer.',
-    's2.l1': 'Next.js, React and TypeScript',
-    's2.l2': 'Database and sign-in with Supabase',
-    's2.l3': 'Admin panel in Serbian or English',
-    's2.l4': 'PDF documents and email notifications',
-    's2.l5': 'Training on how to use it',
-    's3.title': '3D and motion',
-    's3.sum': 'When a product or a space needs to be seen from every angle.',
-    's3.body': '3D configurators, scroll-driven animation and interactive views. Examples are the Modus Gradnja building and the rakija that pours as you scroll.',
-    's3.l1': '3D models in Three.js',
-    's3.l2': 'Animation with GSAP',
-    's3.l3': 'Optimised to run smoothly on phones',
-    's4.title': 'Maintenance',
-    's4.sum': 'You send me a message and I make the change.',
-    's4.body': 'Monthly maintenance for sites I built or take over from others: content and price updates, fixes and regular checks.',
-    's4.l1': 'Text, image and price updates',
-    's4.l2': 'Fixes and technical support',
-    's4.l3': 'Speed and health checks',
-
-    'process.title': 'How I work',
-    'process.sub': 'This is what working together looks like, from the first call to the site on your domain.',
-    'process.ctaText': 'The call is free and doesn’t commit you to anything.',
-    'process.cta': 'Book a call',
-    'p1.time': 'Free',
-    'p2.time': 'About a week',
-    'p3.time': '1 to 3 weeks',
-    'p4.time': 'One day',
-    'p1.title': 'Conversation',
-    'p1.text': 'A short call or a coffee in Obrenovac or Belgrade. You tell me what your business does and what you expect from the site, and afterwards I send you a proposal with a price and a timeline.',
-    'p2.title': 'Design',
-    'p2.text': 'I put together the layout and the look and send you a link to check it in your browser. You tell me what you don’t like, I fix it, and only then do I start building.',
-    'p3.title': 'Build',
-    'p3.text': 'I code the site, add your copy and photos and test it on a phone, a tablet and a desktop.',
-    'p4.title': 'Launch',
-    'p4.text': 'I connect the domain, submit the site to Google and give you all the logins. If something needs changing later, I’m around.',
-
-    'about.alt1': 'Stefan Stević at the Phygital Sports Summit in Abu Dhabi',
-    'about.cap1': 'Phygital Sports Summit, Abu Dhabi, December 2025.',
-    'about.title': 'Hi, I’m Stefan.',
-    'about.p1': 'I’m a web developer from Obrenovac, Serbia. Before focusing on building websites, I worked at the marketing agency Hero Advertising and at the SESE esports federation, where I took part in international events and congresses, from Abu Dhabi to Malaysia.',
-    'about.p2': 'Marketing taught me that a website exists to sell. So before I write the first line of code, I ask who your customers are and what would convince them to call you.',
-    'about.p3': 'Now I build websites and web apps for businesses, from 3D apartment viewers to booking systems. I do everything myself, so you deal with me directly.',
-    'about.k1': 'Location',
-    'about.v1': 'Obrenovac, Belgrade',
-    'about.k2': 'Languages',
-    'about.v2': 'Serbian, English',
-    'about.k3': 'Studies',
-    'about.v3': 'Academy of Technical and Art Applied Studies, Belgrade (VIŠER)',
-    'about.k4': 'Tools',
-    'about.k5': 'Online',
-    'about.alt2': 'Stefan Stević at an international esports congress',
-    'about.cap2': 'At an international esports congress in Malaysia, 2025.',
-
-    'faq.title': 'Questions',
-    'faq.sub': 'If your question isn’t here, message me on Viber or WhatsApp.',
-    'faq.askTitle': 'Ask my AI assistant',
-    'faq.askSub': 'It knows my work and replies instantly.',
-    'faq.q1': 'How much does a website cost?',
-    'faq.a1': 'It depends on how many pages and features you need. A simple business site costs far less than a web app with bookings and an admin panel. After a short call you get an exact price, and it doesn’t change unless we change the plan.',
-    'faq.q2': 'How long does it take?',
-    'faq.a2': 'A business site is usually ready two to four weeks after I get the copy and photos. Bigger web apps take longer, and you know the timeline before I start.',
-    'faq.q3': 'Do you only work with businesses in Obrenovac?',
-    'faq.a3': 'No. I mostly work with businesses in Obrenovac and Belgrade, where we can also meet in person, but I work with people from all over Serbia and abroad by phone and video call.',
-    'faq.q4': 'Will I be able to edit the site myself?',
-    'faq.a4': 'If you need to, you get an admin panel where you change prices, offers or dates yourself, like the Na Izlet agency does. If you’d rather not deal with it, send me a message and I’ll make the change.',
-    'faq.q5': 'Do you help with the domain, hosting and Google?',
-    'faq.a5': 'Yes. I help you pick and buy a domain, put the site on fast hosting, connect it to Google Search Console and set up your Google Business Profile, so people find you more easily in search and on the map.',
-    'faq.q6': 'I already have a website. Can you fix it?',
-    'faq.a6': 'Yes. Sometimes it’s enough to speed it up and fix what visitors see first, and sometimes a new site makes more sense, like it did for the Na Izlet agency. I’ll take a look and tell you honestly what’s worth doing.',
-
-    'contact.title': 'Tell me what you need.',
-    'contact.intro': 'Tell me briefly what your business does and what you need. I’ll get back to you with a proposal, a ballpark price and a timeline.',
-    'contact.copy': 'Copy address',
-    'contact.fast': 'I reply fastest on WhatsApp and Viber, usually the same day.',
-    'contact.mailLabel': 'Or by email:',
-    'contact.formTitle': 'Send an enquiry',
-    'phone.display': '+381 64 558 0188',
-    'ch.call': 'Call',
-    'form.name': 'Name',
-    'form.company': 'Company (optional)',
-    'form.contact': 'Email or phone',
-    'form.type': 'What do you need',
-    'form.other': 'Something else',
-    'form.msg': 'Message',
-    'form.msgPh': 'E.g. we install air conditioners and need a site people will call us from.',
-    'form.send': 'Send message',
-
-    'footer.role': 'Web development, Obrenovac and Belgrade',
-    'footer.time': 'Local time in Obrenovac',
-    'footer.top': 'Back to top',
-    'footer.social': 'Social and contact',
-    'fab.label': 'Message me',
-    'fab.form': 'Send an enquiry',
-    'fab.ai': 'Ask my AI assistant',
-  };
-
   const STR = {
     sr: {
-      open: 'Otvori sajt',
       copied: 'Kopirano',
       sending: 'Šaljem…',
       sent: 'Hvala! Poruka je poslata, javljam se uskoro.',
@@ -262,7 +38,6 @@
       errMsg: 'Napišite par reči o projektu.',
     },
     en: {
-      open: 'Open site',
       copied: 'Copied',
       sending: 'Sending…',
       sent: 'Thanks! Your message is on its way, I’ll be in touch soon.',
@@ -274,54 +49,8 @@
     },
   };
 
-  const TITLE_SR = document.title;
-  let lang = 'sr';
-  try {
-    const saved = localStorage.getItem('lang');
-    if (saved === 'en' || saved === 'sr') lang = saved;
-  } catch (e) { /* storage unavailable */ }
-
-  // keep the Serbian originals so we can switch back
-  $$('[data-i18n]').forEach((el) => { el.dataset.sr = el.innerHTML; });
-  $$('[data-i18n-attr]').forEach((el) => {
-    el.dataset.i18nAttr.split('|').forEach((pair) => {
-      const attr = pair.split(':')[0];
-      el.dataset['sr' + attr.replace(/[^a-z]/gi, '')] = el.getAttribute(attr) || '';
-    });
-  });
-
+  const lang = root.lang === 'en' ? 'en' : 'sr';
   const cursorLabel = $('[data-cursor-label]');
-
-  function applyLang(next, save = true) {
-    lang = next;
-    $$('[data-i18n]').forEach((el) => {
-      const v = next === 'en' ? EN[el.dataset.i18n] : el.dataset.sr;
-      if (v !== undefined && el.innerHTML !== v) el.innerHTML = v;
-    });
-    $$('[data-i18n-attr]').forEach((el) => {
-      el.dataset.i18nAttr.split('|').forEach((pair) => {
-        const [attr, key] = pair.split(':');
-        const v = next === 'en' ? EN[key] : el.dataset['sr' + attr.replace(/[^a-z]/gi, '')];
-        if (v !== undefined) el.setAttribute(attr, v);
-      });
-    });
-    root.lang = next === 'en' ? 'en' : 'sr-Latn';
-    document.title = next === 'en' ? EN['meta.title'] : TITLE_SR;
-    $$('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === next)));
-    if (cursorLabel) cursorLabel.textContent = STR[next].open;
-    if (save) {
-      try { localStorage.setItem('lang', next); } catch (e) { /* ignore */ }
-    }
-    document.dispatchEvent(new CustomEvent('langchange'));
-    if (hasGSAP) requestAnimationFrame(() => ST.refresh());
-  }
-
-  $$('[data-lang]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.lang !== lang) applyLang(btn.dataset.lang);
-    });
-  });
-  if (lang !== 'sr') applyLang(lang, false);
 
   /* ------------------------------------------------------------------------
      Smooth scroll (Lenis)
@@ -386,20 +115,26 @@
     if (e.matches && menuOpen) setMenu(false);
   });
 
-  // Clean addresses: stefanstevic.rs/radovi instead of /#radovi or /index.html.
-  // On Vercel every route below is rewritten to index.html (vercel.json).
+  // Clean addresses: stefanstevic.rs/radovi instead of /#radovi or /index.html,
+  // and stefanstevic.rs/en/work on the English page.
+  // On Vercel every route below is rewritten to the home page (vercel.json).
   // On github.io (no rewrites) the address only loses the #hash.
-  const ROUTES = { radovi: 'radovi', usluge: 'usluge', 'kako-radim': 'proces', 'o-meni': 'o-meni', pitanja: 'pitanja', kontakt: 'kontakt' };
+  const ROUTES = lang === 'en'
+    ? { work: 'radovi', services: 'usluge', process: 'proces', about: 'o-meni', questions: 'pitanja', contact: 'kontakt' }
+    : { radovi: 'radovi', usluge: 'usluge', 'kako-radim': 'proces', 'o-meni': 'o-meni', pitanja: 'pitanja', kontakt: 'kontakt' };
   const ROUTE_OF = {};
   Object.keys(ROUTES).forEach((slug) => { ROUTE_OF[ROUTES[slug]] = slug; });
   const pathRouting = !/github\.io$/.test(location.hostname);
   const slugNow = location.pathname.replace(/^.*\//, '').replace(/\.html$/, '');
-  const BASE = location.pathname.replace(/[^/]*$/, '');
+  const BASE = lang === 'en'
+    ? location.pathname.replace(/\/en(\/.*)?$/, '/en/')
+    : location.pathname.replace(/[^/]*$/, '');
+  const HOME = lang === 'en' ? BASE.replace(/\/$/, '') : BASE;
 
   function setCleanUrl(id) {
     if (!history.replaceState) return;
     const slug = pathRouting ? ROUTE_OF[id] : null;
-    history.replaceState(null, '', BASE + (slug || '') + location.search);
+    history.replaceState(null, '', (slug ? BASE + slug : HOME) + location.search);
   }
 
   // arriving on /radovi, /kontakt ... (or an old #hash link): jump to that section
@@ -670,8 +405,16 @@
       }
       let kernSum = 0;
       for (let i = 0; i < n - 1; i++) kernSum += this.kern[i];
-      const natural = sum + kernSum;
-      const gap = this.intro >= 1 && n > 1 ? (this.width - natural) / (n - 1) : 0;
+      let gap = 0;
+      if (n > 1 && this.intro >= 1) {
+        gap = (this.width - sum - kernSum) / (n - 1);
+      } else if (n > 1) {
+        // during the intro, ease in the spacing the line will have at the end,
+        // so the last frame of the intro does not jump to the justified layout
+        let full = kernSum;
+        for (let i = 0; i < n; i++) full += this.advAt(i, this.cur[i]);
+        gap = ((this.width - full) / (n - 1)) * this.intro;
+      }
       let x = 0;
       for (let i = 0; i < n; i++) {
         const a = this.advAt(i, this.widths[i]);
@@ -682,8 +425,12 @@
           s.style.fontStretch = wd.toFixed(2) + '%';
           this.lastW[i] = wd;
         }
-        const ty = this.rise[i].v * this.fs;
-        const t = `translate3d(${x.toFixed(1)}px,${ty.toFixed(1)}px,0)`;
+        const rv = this.rise[i].v;
+        const ty = rv * this.fs;
+        // letters lean back a little while they rise and straighten as they land
+        const t = rv > 0.001
+          ? `translate3d(${x.toFixed(1)}px,${ty.toFixed(1)}px,0) rotate(${(rv * 7).toFixed(2)}deg)`
+          : `translate3d(${x.toFixed(1)}px,0px,0)`;
         if (t !== this.lastT[i]) {
           s.style.transform = t;
           this.lastT[i] = t;
@@ -793,11 +540,6 @@
       lastT = now;
       return;
     }
-    // touch screens: ~30 fps is plenty for the slow sweep
-    if (!finePointer && heroState.interactive) {
-      tick.skip = !tick.skip;
-      if (tick.skip) return;
-    }
     const dt = Math.min(0.066, (now - lastT) / 1000);
     lastT = now;
 
@@ -869,6 +611,8 @@
     }
     lines.forEach((l) => { l.intro = 0; l.rise.forEach((r) => { r.v = 1.12; }); });
     const allRise = lines.flatMap((l) => l.rise);
+    const edge = curtain ? $('.hero__curtain-edge', curtain) : null;
+    const picture = $('picture', figureMove);
     const tl = gsap.timeline({
       defaults: { ease: 'expo.out' },
       onComplete: () => {
@@ -876,13 +620,25 @@
         heroState.interactive = true;
       },
     });
-    tl.to(curtain, { yPercent: -100, duration: 0.9, ease: 'power4.inOut' }, 0)
-      .set(curtain, { display: 'none' })
-      .to(allRise, { v: 0, duration: 1.2, stagger: 0.04 }, 0.3)
-      .to(lines, { intro: 1, duration: 1.6, ease: 'expo.inOut' }, 0.42)
-      .fromTo(figureMove, { yPercent: 8, clipPath: 'inset(100% 0% 0% 0%)' }, { yPercent: 0, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'expo.out', clearProps: 'clipPath' }, 0.38)
-      .fromTo(intros, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 1.1, stagger: 0.08 }, 0.85)
-      .fromTo(nav, { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 1, clearProps: 'opacity,transform' }, 0.8);
+    // Everything below animates transforms and opacity only, so the browser
+    // can hand it to the GPU and keep it at full frame rate on phones too.
+    // 1) the dark curtain lifts; its soft lower edge bulges while it moves fastest
+    tl.to(curtain, { yPercent: -100, duration: 1.05, ease: 'expo.inOut' }, 0);
+    if (edge) {
+      tl.fromTo(edge, { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: 'power2.in' }, 0)
+        .to(edge, { scaleY: 0, duration: 0.55, ease: 'power3.out' }, 0.5);
+    }
+    tl.set(curtain, { display: 'none' }, 1.05)
+      // 2) letters rise out of the line, straightening as they come up
+      .to(allRise, { v: 0, duration: 1.25, stagger: 0.045 }, 0.32)
+      // 3) the name opens up from condensed to full width
+      .to(lines, { intro: 1, duration: 1.7, ease: 'expo.inOut' }, 0.4)
+      // 4) the portrait is wiped in from below (mask slides up, photo almost still)
+      .fromTo(figureMove, { yPercent: 100 }, { yPercent: 0, duration: 1.5, ease: 'expo.out' }, 0.5)
+      .fromTo(picture, { yPercent: -88, scale: 1.08 }, { yPercent: 0, scale: 1, duration: 1.7, ease: 'expo.out', clearProps: 'transform' }, 0.5)
+      // 5) copy, buttons and navigation
+      .fromTo(intros, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out', stagger: 0.07 }, 0.95)
+      .fromTo(nav, { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', clearProps: 'opacity,transform' }, 0.9);
   }
 
   async function initHero() {
@@ -906,7 +662,6 @@
     }
   }
   initHero();
-  document.addEventListener('langchange', () => { if (heroState.ready) layoutHero(); });
 
   let resizeTimer = 0;
   let lastW = window.innerWidth;
@@ -1191,6 +946,7 @@
      ------------------------------------------------------------------------ */
   $$('[data-copy]').forEach((btn) => {
     let timer = 0;
+    const label = btn.innerHTML;
     btn.addEventListener('click', async () => {
       const text = btn.dataset.copy;
       try {
@@ -1208,7 +964,7 @@
       btn.innerHTML = STR[lang].copied;
       clearTimeout(timer);
       timer = setTimeout(() => {
-        btn.innerHTML = lang === 'en' ? EN[btn.dataset.i18n] : btn.dataset.sr;
+        btn.innerHTML = label;
       }, 1800);
     });
   });
@@ -1310,7 +1066,6 @@
     els.forEach((el) => { if (!el.classList.contains('is-in')) hlObserver.observe(el); });
   }
   watchHighlights();
-  document.addEventListener('langchange', watchHighlights);
 
   /* ------------------------------------------------------------------------
      Magnetic buttons (mouse only)

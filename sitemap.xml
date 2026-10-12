@@ -1,7 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://stefanstevic.rs/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/izrada-sajta-obrenovac</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/izrada-sajta-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/web-design-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/izrada-sajta-obrenovac"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/izrada-sajta-beograd</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/izrada-sajta-beograd"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/web-design-belgrade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/izrada-sajta-beograd"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/cena-izrade-sajta</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/cena-izrade-sajta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/website-cost"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/cena-izrade-sajta"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/usluge/izrada-sajta-za-firmu</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/izrada-sajta-za-firmu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/business-website"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/izrada-sajta-za-firmu"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/usluge/izrada-web-aplikacija</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/izrada-web-aplikacija"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/web-app-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/izrada-web-aplikacija"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/usluge/3d-konfigurator-i-animacije</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/3d-konfigurator-i-animacije"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/3d-configurator-and-animation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/3d-konfigurator-i-animacije"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/usluge/odrzavanje-sajta</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/odrzavanje-sajta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/website-maintenance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/odrzavanje-sajta"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/radovi/modus-gradnja</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/modus-gradnja"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/modus-gradnja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/modus-gradnja"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/radovi/na-izlet</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/na-izlet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/na-izlet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/na-izlet"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/radovi/leto-u-turskoj</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/leto-u-turskoj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/leto-u-turskoj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/leto-u-turskoj"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/radovi/tomasevacka</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/tomasevacka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/tomasevacka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/tomasevacka"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/radovi/pro-klima-obrenovac</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/pro-klima-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/pro-klima-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/pro-klima-obrenovac"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/web-design-obrenovac</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/izrada-sajta-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/web-design-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/izrada-sajta-obrenovac"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/web-design-belgrade</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/izrada-sajta-beograd"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/web-design-belgrade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/izrada-sajta-beograd"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/website-cost</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/cena-izrade-sajta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/website-cost"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/cena-izrade-sajta"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/services/business-website</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/izrada-sajta-za-firmu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/business-website"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/izrada-sajta-za-firmu"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/services/web-app-development</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/izrada-web-aplikacija"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/web-app-development"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/izrada-web-aplikacija"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/services/3d-configurator-and-animation</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/3d-konfigurator-i-animacije"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/3d-configurator-and-animation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/3d-konfigurator-i-animacije"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/services/website-maintenance</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/usluge/odrzavanje-sajta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/services/website-maintenance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/usluge/odrzavanje-sajta"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/work/modus-gradnja</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/modus-gradnja"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/modus-gradnja"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/modus-gradnja"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/work/na-izlet</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/na-izlet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/na-izlet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/na-izlet"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/work/leto-u-turskoj</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/leto-u-turskoj"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/leto-u-turskoj"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/leto-u-turskoj"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/work/tomasevacka</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/tomasevacka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/tomasevacka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/tomasevacka"/>
+  </url>
+  <url>
+    <loc>https://stefanstevic.rs/en/work/pro-klima-obrenovac</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/radovi/pro-klima-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en/work/pro-klima-obrenovac"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/radovi/pro-klima-obrenovac"/>
   </url>
 </urlset>

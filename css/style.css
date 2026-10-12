@@ -580,23 +580,26 @@ html.lenis body {
   font-size: 0.8125rem;
   font-weight: 640;
 }
-.lang button {
+.lang a {
+  display: inline-grid;
+  place-items: center;
   min-width: 38px;
   min-height: 30px;
   padding: 0 8px;
-  border: 0;
   border-radius: 999px;
-  background: transparent;
-  cursor: pointer;
+  text-decoration: none;
   opacity: 0.8;
   transition: background-color 0.3s, color 0.3s, opacity 0.3s;
 }
-.lang button[aria-pressed="true"] {
+.lang a:hover {
+  opacity: 1;
+}
+.lang a[aria-current="true"] {
   opacity: 1;
   background: var(--ink);
   color: var(--sun);
 }
-.nav.is-solid .lang button[aria-pressed="true"] {
+.nav.is-solid .lang a[aria-current="true"] {
   background: var(--paper);
   color: var(--ink);
 }
@@ -732,7 +735,7 @@ html.lenis body {
   color: var(--mist);
   font-size: 0.9375rem;
 }
-.menu__foot .lang button[aria-pressed="true"] {
+.menu__foot .lang a[aria-current="true"] {
   background: var(--paper);
   color: var(--ink);
 }
@@ -784,6 +787,23 @@ html.lenis body {
 }
 .js .hero__curtain {
   display: block;
+}
+/* soft lower edge of the curtain: bulges down while the curtain lifts */
+.hero__curtain-edge {
+  position: absolute;
+  left: -15%;
+  right: -15%;
+  top: calc(100% - 1px);
+  height: clamp(70px, 15vh, 190px);
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background: var(--ink);
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+/* during the intro the portrait is revealed by sliding it inside its own box */
+.hero.is-intro .hero__figure {
+  overflow: hidden;
 }
 
 .hero__name {
@@ -1025,7 +1045,9 @@ html.lenis body {
   text-wrap: balance;
 }
 
-.count {
+/* the number sits in CSS, so it is not part of the heading text */
+.has-count::after {
+  content: attr(data-count);
   display: inline-block;
   margin-left: 0.4em;
   padding: 0.32em 0.6em 0.28em;
@@ -1294,6 +1316,30 @@ html.lenis body {
   color: var(--accent);
   overflow: hidden;
   transition: background-color 0.6s ease, color 0.6s ease;
+}
+.project__more {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  width: fit-content;
+  margin-top: 18px;
+  color: var(--paper);
+  font-weight: 640;
+  font-size: 0.96875rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--accent);
+}
+.project__more svg {
+  width: 1.05em;
+  height: 1.05em;
+  color: var(--accent);
+  transition: transform 0.45s var(--ease-out);
+}
+.project__more:hover svg,
+.project__more:focus-visible svg {
+  transform: translateX(4px);
 }
 .project__link-icon svg {
   grid-area: 1 / 1;
@@ -2013,6 +2059,14 @@ a.shot:hover img {
 .ask:focus-visible svg {
   transform: translateX(4px);
 }
+.ask--more {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+.faq__prices {
+  margin-top: 22px;
+}
 .service__content ul {
   list-style: none;
   padding: 0;
@@ -2575,6 +2629,9 @@ a.shot:hover img {
   font-weight: 400;
   font-stretch: 100%;
 }
+.footer__grid--links {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1fr) auto;
+}
 .footer__nav {
   list-style: none;
   padding: 0;
@@ -2608,7 +2665,13 @@ a.shot:hover img {
   text-underline-offset: 4px;
 }
 .footer__time {
+  margin-bottom: 4px;
+}
+.footer__hours {
+  max-width: 24ch;
   margin-bottom: 8px;
+  font-size: 0.875rem;
+  line-height: 1.45;
 }
 .footer__time strong {
   display: block;

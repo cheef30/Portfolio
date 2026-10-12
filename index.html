@@ -15,6 +15,7 @@
   <meta property="og:url" content="https://stefanstevic.rs/">
   <meta property="og:site_name" content="Stefan Stević">
   <meta property="og:locale" content="sr_RS">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Izrada sajtova Obrenovac i Beograd | Stefan Stević">
   <meta property="og:description" content="Sajtovi i web aplikacije za firme. Brzi na telefonu, jasni i napravljeni da vas ljudi pozovu.">
   <meta property="og:image" content="https://stefanstevic.rs/og-image.jpg">
@@ -27,6 +28,9 @@
   <meta name="twitter:image" content="https://stefanstevic.rs/og-image.jpg">
 
   <link rel="canonical" href="https://stefanstevic.rs/">
+  <link rel="alternate" hreflang="sr-Latn" href="https://stefanstevic.rs/">
+  <link rel="alternate" hreflang="en" href="https://stefanstevic.rs/en">
+  <link rel="alternate" hreflang="x-default" href="https://stefanstevic.rs/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -35,7 +39,7 @@
   <link rel="preload" href="fonts/archivo-base.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/archivo-sr.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" type="image/avif" imagesrcset="img/stefan-hero-600.avif 600w, img/stefan-hero-720.avif 720w, img/stefan-hero-890.avif 890w" imagesizes="(min-width: 1024px) 56vw, 120vw" fetchpriority="high">
-  <link rel="stylesheet" href="css/style.css?v=794c9e78">
+  <link rel="stylesheet" href="css/style.css?v=eccfb300">
 
   <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
@@ -48,7 +52,10 @@
       "@id": "https://stefanstevic.rs/#website",
       "url": "https://stefanstevic.rs/",
       "name": "Stefan Stević",
-      "inLanguage": "sr-Latn",
+      "inLanguage": [
+        "sr-Latn",
+        "en"
+      ],
       "publisher": {
         "@id": "https://stefanstevic.rs/#stefan"
       }
@@ -106,12 +113,38 @@
       "founder": {
         "@id": "https://stefanstevic.rs/#stefan"
       },
+      "priceRange": "€€",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Obrenovac",
         "addressRegion": "Beograd",
         "addressCountry": "RS"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.6547,
+        "longitude": 20.2003
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
       "areaServed": [
         {
           "@type": "City",
@@ -256,8 +289,8 @@
 
       <div class="nav__end">
         <div class="lang" role="group" aria-label="Jezik" data-i18n-attr="aria-label:lang.label">
-          <button type="button" data-lang="sr" aria-pressed="true">SR</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <a href="/" data-lang="sr" hreflang="sr-Latn" aria-current="true">SR</a>
+          <a href="/en" data-lang="en" hreflang="en">EN</a>
         </div>
         <a class="btn btn--small nav__cta" href="#kontakt" data-i18n="nav.cta">Pišite mi</a>
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
@@ -287,8 +320,8 @@
     <div class="menu__foot">
       <a href="mailto:stefanstevicoz30@gmail.com">stefanstevicoz30@gmail.com</a>
       <div class="lang" role="group" aria-label="Jezik" data-i18n-attr="aria-label:lang.label">
-        <button type="button" data-lang="sr" aria-pressed="true">SR</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <a href="/" data-lang="sr" hreflang="sr-Latn" aria-current="true">SR</a>
+        <a href="/en" data-lang="en" hreflang="en">EN</a>
       </div>
     </div>
   </div>
@@ -338,7 +371,7 @@
         </div>
       </div>
       <div class="hero__shade" data-hero-shade aria-hidden="true"></div>
-      <div class="hero__curtain" data-curtain aria-hidden="true"></div>
+      <div class="hero__curtain" data-curtain aria-hidden="true"><i class="hero__curtain-edge"></i></div>
     </section>
 
     <!-- ============ Uvod ============ -->
@@ -366,7 +399,7 @@
     <section class="section work" id="radovi" data-work data-theme="#141518">
       <div class="wrap">
         <header class="work__head">
-          <h2 class="section-title"><span data-i18n="work.title">Izabrani radovi</span><sup class="count">05</sup></h2>
+          <h2 class="section-title has-count" data-count="05"><span data-i18n="work.title">Izabrani radovi</span></h2>
           <p class="work__sub" data-i18n="work.sub">Svaki od ovih sajtova je rešavao drugačiji problem. Kliknite na ekran i otvoriće se sajt.</p>
         </header>
 
@@ -391,6 +424,7 @@
               <li>Three.js</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>JSON-LD</li>
             </ul>
             <a class="project__link" href="https://modusgradnja.rs" target="_blank" rel="noopener"><span>modusgradnja.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+            <a class="project__more" href="/radovi/modus-gradnja"><span data-i18n="more.project">Ceo opis projekta</span><span class="sr-only">: Modus Gradnja</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="project__media">
             <a class="shot shot--browser" href="https://modusgradnja.rs" target="_blank" rel="noopener" data-cursor>
@@ -433,6 +467,7 @@
               <li>Next.js</li><li>React</li><li>TypeScript</li><li>Supabase</li><li>Vercel</li>
             </ul>
             <a class="project__link" href="https://naizlet.rs" target="_blank" rel="noopener"><span>naizlet.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+            <a class="project__more" href="/radovi/na-izlet"><span data-i18n="more.project">Ceo opis projekta</span><span class="sr-only">: Na Izlet</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="project__media">
             <a class="shot shot--browser" href="https://naizlet.rs" target="_blank" rel="noopener" data-cursor>
@@ -474,6 +509,7 @@
               <li>Next.js</li><li>React</li><li>Vercel</li>
             </ul>
             <a class="project__link" href="https://letouturskoj.rs" target="_blank" rel="noopener"><span>letouturskoj.rs</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+            <a class="project__more" href="/radovi/leto-u-turskoj"><span data-i18n="more.project">Ceo opis projekta</span><span class="sr-only">: Leto u Turskoj</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="project__media">
             <a class="shot shot--browser" href="https://letouturskoj.rs" target="_blank" rel="noopener" data-cursor>
@@ -515,6 +551,7 @@
               <li>JavaScript</li><li>Canvas</li><li>HTML</li><li>CSS</li><li>ffmpeg</li>
             </ul>
             <a class="project__link" href="https://cheef30.github.io/tomasevacka/" target="_blank" rel="noopener"><span data-i18n="toma.link">Pogledajte sajt</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+            <a class="project__more" href="/radovi/tomasevacka"><span data-i18n="more.project">Ceo opis projekta</span><span class="sr-only">: Tomaševačka</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="project__media">
             <a class="shot shot--browser" href="https://cheef30.github.io/tomasevacka/" target="_blank" rel="noopener" data-cursor>
@@ -556,6 +593,7 @@
               <li>HTML</li><li>CSS</li><li>JavaScript</li>
             </ul>
             <a class="project__link" href="https://cheef30.github.io/proklima-obrenovac/" target="_blank" rel="noopener"><span data-i18n="pro.link">Pogledajte pregled redizajna</span><span class="project__link-icon" aria-hidden="true"><svg><use href="#i-out"/></svg><svg><use href="#i-out"/></svg></span></a>
+            <a class="project__more" href="/radovi/pro-klima-obrenovac"><span data-i18n="more.project">Ceo opis projekta</span><span class="sr-only">: PRO KLIMA Obrenovac</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
           <div class="project__media">
             <a class="shot shot--browser" href="https://cheef30.github.io/proklima-obrenovac/" target="_blank" rel="noopener" data-cursor>
@@ -583,7 +621,7 @@
     <section class="section archive" id="arhiva" data-archive data-theme="#121628">
       <div class="wrap">
         <header class="archive__head">
-          <h2 class="section-title"><span data-i18n="archive.title">Još radova</span><sup class="count">05</sup></h2>
+          <h2 class="section-title has-count" data-count="05"><span data-i18n="archive.title">Još radova</span></h2>
           <p class="archive__sub" data-i18n="archive.sub">Manji projekti, koncepti i stvari koje sam napravio za sebe.</p>
         </header>
         <ul class="archive__list">
@@ -697,6 +735,7 @@
                   <div class="service__lead">
                     <p data-i18n="s1.body">Prezentacioni sajt ili landing stranica. Dizajn radim od nule za svaku firmu, ne koristim gotove šablone.</p>
                     <a class="ask" href="#upit" data-pick="Sajt za firmu"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="ask ask--more" href="/usluge/izrada-sajta-za-firmu"><span data-i18n="svc.more">Više o usluzi</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
                   </div>
                   <ul>
                     <li data-i18n="s1.l1">Dizajn po meri vaše firme</li>
@@ -724,6 +763,7 @@
                   <div class="service__lead">
                     <p data-i18n="s2.body">Rezervacije, kalendari, admin panel za cene i ponude, nalozi korisnika i baza podataka. Kao kod agencije Na Izlet, gde se izleti i termini unose bez programera.</p>
                     <a class="ask" href="#upit" data-pick="Web aplikacija"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="ask ask--more" href="/usluge/izrada-web-aplikacija"><span data-i18n="svc.more">Više o usluzi</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
                   </div>
                   <ul>
                     <li data-i18n="s2.l1">Next.js, React i TypeScript</li>
@@ -750,6 +790,7 @@
                   <div class="service__lead">
                     <p data-i18n="s3.body">3D konfiguratori, animacije koje prate skrol i interaktivni prikazi. Primeri su zgrada Modus Gradnje i rakija koja se sipa dok skrolujete.</p>
                     <a class="ask" href="#upit" data-pick="3D i animacije"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="ask ask--more" href="/usluge/3d-konfigurator-i-animacije"><span data-i18n="svc.more">Više o usluzi</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
                   </div>
                   <ul>
                     <li data-i18n="s3.l1">3D modeli u Three.js-u</li>
@@ -774,6 +815,7 @@
                   <div class="service__lead">
                     <p data-i18n="s4.body">Mesečno održavanje za sajtove koje sam napravio ili preuzimam od drugih: izmene sadržaja i cena, ispravke i redovne provere.</p>
                     <a class="ask" href="#upit" data-pick="Održavanje"><span data-i18n="svc.ask">Pitajte za ovu uslugu</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                    <a class="ask ask--more" href="/usluge/odrzavanje-sajta"><span data-i18n="svc.more">Više o usluzi</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
                   </div>
                   <ul>
                     <li data-i18n="s4.l1">Izmene teksta, slika i cena</li>
@@ -872,6 +914,7 @@
         <header class="faq__head">
           <h2 class="section-title" data-i18n="faq.title">Česta pitanja</h2>
           <p class="faq__sub" data-i18n="faq.sub">Ako ovde nema odgovora, pišite mi na Viber ili WhatsApp.</p>
+          <a class="ask faq__prices" href="/cena-izrade-sajta"><span data-i18n="faq.prices">Okvirne cene po paketima</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <button class="faq__ask" type="button" data-chat-open hidden><span class="faq__ask-mark" aria-hidden="true"><svg class="logo"><use href="#i-logo"/></svg></span><span><strong data-i18n="faq.askTitle">Pitajte mog AI asistenta</strong><span data-i18n="faq.askSub">Zna sve o mom radu i odgovara odmah.</span></span></button>
         </header>
         <div class="faq__list">
@@ -995,7 +1038,7 @@
 
   <!-- ============ Footer ============ -->
   <footer class="footer">
-    <div class="wrap footer__grid">
+    <div class="wrap footer__grid footer__grid--links">
       <p class="footer__brand"><svg class="logo footer__logo" aria-hidden="true"><use href="#i-logo"/></svg>Stefan Stević <span data-i18n="footer.role">Izrada sajtova, Obrenovac i Beograd</span></p>
       <ul class="footer__nav">
         <li><a href="#radovi" data-i18n="nav.work">Radovi</a></li>
@@ -1004,8 +1047,18 @@
         <li><a href="#o-meni" data-i18n="nav.about">O meni</a></li>
         <li><a href="#pitanja" data-i18n="nav.faq">Česta pitanja</a></li>
       </ul>
+      <ul class="footer__nav footer__links" aria-label="Usluge" data-i18n-attr="aria-label:footer.services">
+        <li><a href="/usluge/izrada-sajta-za-firmu" data-i18n="fl.firma">Izrada sajta za firmu</a></li>
+        <li><a href="/usluge/izrada-web-aplikacija" data-i18n="fl.app">Izrada web aplikacija</a></li>
+        <li><a href="/usluge/3d-konfigurator-i-animacije" data-i18n="fl.3d">3D i animacije</a></li>
+        <li><a href="/usluge/odrzavanje-sajta" data-i18n="fl.odrz">Održavanje sajta</a></li>
+        <li><a href="/cena-izrade-sajta" data-i18n="fl.cene">Cena izrade sajta</a></li>
+        <li><a href="/izrada-sajta-obrenovac" data-i18n="fl.obrenovac">Izrada sajta Obrenovac</a></li>
+        <li><a href="/izrada-sajta-beograd" data-i18n="fl.beograd">Izrada sajta Beograd</a></li>
+      </ul>
       <div class="footer__contact">
         <p class="footer__time"><span data-i18n="footer.time">Vreme u Obrenovcu</span> <strong data-clock>--:--</strong></p>
+        <p class="footer__hours" data-i18n="footer.hours">Radnim danima 9 do 20 h, subotom 10 do 16 h</p>
         <a class="footer__phone" href="tel:+381645580188">064 558 0188</a>
         <a class="footer__mail" href="mailto:stefanstevicoz30@gmail.com">stefanstevicoz30@gmail.com</a>
       </div>
@@ -1039,7 +1092,7 @@
     </button>
   </div>
 
-  <div class="cursor-label" data-cursor-label aria-hidden="true">Otvori sajt</div>
+  <div class="cursor-label" data-cursor-label aria-hidden="true" data-i18n="cursor.open">Otvori sajt</div>
 
   <!-- Vercel Web Analytics (radi samo na Vercelu) -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
@@ -1047,7 +1100,7 @@
   <script src="vendor/gsap.min.js" defer></script>
   <script src="vendor/ScrollTrigger.min.js" defer></script>
   <script src="vendor/lenis.min.js" defer></script>
-  <script src="js/chat.js?v=6cf790f2" defer></script>
-  <script src="js/main.js?v=876d2d40" defer></script>
+  <script src="js/chat.js?v=52912d4a" defer></script>
+  <script src="js/main.js?v=d9eb6fba" defer></script>
 </body>
 </html>

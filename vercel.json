@@ -21,12 +21,31 @@
       "source": "/README.md",
       "destination": "/",
       "permanent": false
+    },
+    {
+      "source": "/en/index",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/en/index.html",
+      "destination": "/en",
+      "permanent": true
+    },
+    {
+      "source": "/tools/:path*",
+      "destination": "/",
+      "permanent": false
     }
   ],
   "rewrites": [
     {
       "source": "/(radovi|usluge|kako-radim|o-meni|pitanja|kontakt)",
       "destination": "/"
+    },
+    {
+      "source": "/en/(work|services|process|about|questions|contact)",
+      "destination": "/en"
     }
   ],
   "headers": [
